@@ -1,0 +1,1634 @@
+Compilation report - Sun Jun 28 11:00:20 -03 2026
+Root: /mnt/c/Users/frank/OneDrive/Projetos/livro-competitive/repositorio_competitive
+Build directory: /mnt/c/Users/frank/OneDrive/Projetos/livro-competitive/repositorio_competitive/.compile-check
+Toolchain order: clang-libc++ clang-libc++-experimental clang-libstdc++ clang-libstdc++-tbb gcc gcc-tbb
+
+Discovered toolchains: clang-libc++ clang-libc++-experimental clang-libstdc++ clang-libstdc++-tbb
+
+Toolchain: clang-libc++ (Clang with libc++)
+Compiler: /usr/bin/clang++-23
+Version: Ubuntu clang version 23.0.0 (++20260621082240+441725611d0e-1~exp1~20260621082250.1677)
+CXXFLAGS: -std=c++23 -O2 -Wall -Wextra -pthread -stdlib=libc++ -nostdinc++ -isystem /usr/lib/llvm-23/include/c++/v1
+LDFLAGS: -L /usr/lib/llvm-23/lib -Wl,-rpath,/usr/lib/llvm-23/lib -lc++abi
+  ok   print
+  ok   format
+  ok   ranges
+  ok   ranges23
+  ok   expected
+  ok   expected-monadic
+  ok   jthread
+  miss execution
+       /mnt/c/Users/frank/OneDrive/Projetos/livro-competitive/repositorio_competitive/.compile-check/feature-tests/clang-libc++/execution.cpp:6:35: error: no member named 'seq' in namespace 'std::execution'
+  miss generator
+       /mnt/c/Users/frank/OneDrive/Projetos/livro-competitive/repositorio_competitive/.compile-check/feature-tests/clang-libc++/generator.cpp:1:10: fatal error: 'generator' file not found
+
+Toolchain: clang-libc++-experimental (Clang with libc++ and -fexperimental-library)
+Compiler: /usr/bin/clang++-23
+Version: Ubuntu clang version 23.0.0 (++20260621082240+441725611d0e-1~exp1~20260621082250.1677)
+CXXFLAGS: -std=c++23 -O2 -Wall -Wextra -pthread -fexperimental-library -stdlib=libc++ -nostdinc++ -isystem /usr/lib/llvm-23/include/c++/v1
+LDFLAGS: -L /usr/lib/llvm-23/lib -Wl,-rpath,/usr/lib/llvm-23/lib -lc++abi
+  ok   print
+  ok   format
+  ok   ranges
+  ok   ranges23
+  ok   expected
+  ok   expected-monadic
+  ok   jthread
+  ok   execution
+  miss generator
+       /mnt/c/Users/frank/OneDrive/Projetos/livro-competitive/repositorio_competitive/.compile-check/feature-tests/clang-libc++-experimental/generator.cpp:1:10: fatal error: 'generator' file not found
+
+Toolchain: clang-libstdc++ (Clang with libstdc++)
+Compiler: /usr/bin/clang++-23
+Version: Ubuntu clang version 23.0.0 (++20260621082240+441725611d0e-1~exp1~20260621082250.1677)
+CXXFLAGS: -std=c++23 -O2 -Wall -Wextra -pthread
+LDFLAGS: 
+  miss print
+       /mnt/c/Users/frank/OneDrive/Projetos/livro-competitive/repositorio_competitive/.compile-check/feature-tests/clang-libstdc++/print.cpp:1:10: fatal error: 'print' file not found
+  ok   format
+  ok   ranges
+  miss ranges23
+       /mnt/c/Users/frank/OneDrive/Projetos/livro-competitive/repositorio_competitive/.compile-check/feature-tests/clang-libstdc++/ranges23.cpp:9:24: error: no member named 'to' in namespace 'std::ranges'
+  ok   expected
+  ok   expected-monadic
+  ok   jthread
+  ok   execution
+  miss generator
+       /mnt/c/Users/frank/OneDrive/Projetos/livro-competitive/repositorio_competitive/.compile-check/feature-tests/clang-libstdc++/generator.cpp:1:10: fatal error: 'generator' file not found
+
+Toolchain: clang-libstdc++-tbb (Clang with libstdc++ and TBB)
+Compiler: /usr/bin/clang++-23
+Version: Ubuntu clang version 23.0.0 (++20260621082240+441725611d0e-1~exp1~20260621082250.1677)
+CXXFLAGS: -std=c++23 -O2 -Wall -Wextra -pthread
+LDFLAGS: -ltbb
+  miss print
+       /mnt/c/Users/frank/OneDrive/Projetos/livro-competitive/repositorio_competitive/.compile-check/feature-tests/clang-libstdc++-tbb/print.cpp:1:10: fatal error: 'print' file not found
+  miss format
+       /usr/bin/ld: cannot find -ltbb: No such file or directory
+  miss ranges
+       /usr/bin/ld: cannot find -ltbb: No such file or directory
+  miss ranges23
+       /mnt/c/Users/frank/OneDrive/Projetos/livro-competitive/repositorio_competitive/.compile-check/feature-tests/clang-libstdc++-tbb/ranges23.cpp:9:24: error: no member named 'to' in namespace 'std::ranges'
+  miss expected
+       /usr/bin/ld: cannot find -ltbb: No such file or directory
+  miss expected-monadic
+       /usr/bin/ld: cannot find -ltbb: No such file or directory
+  miss jthread
+       /usr/bin/ld: cannot find -ltbb: No such file or directory
+  miss execution
+       /usr/bin/ld: cannot find -ltbb: No such file or directory
+  miss generator
+       /mnt/c/Users/frank/OneDrive/Projetos/livro-competitive/repositorio_competitive/.compile-check/feature-tests/clang-libstdc++-tbb/generator.cpp:1:10: fatal error: 'generator' file not found
+
+Report: /mnt/c/Users/frank/OneDrive/Projetos/livro-competitive/repositorio_competitive/compilation-report.txt
+Build directory: /mnt/c/Users/frank/OneDrive/Projetos/livro-competitive/repositorio_competitive/.compile-check
+
+Found 385 .cpp files.
+
+OK: .compile-check-msvc/feature-tests/execution-policies.cpp
+Toolchain: clang-libc++-experimental
+Required features: execution
+
+OK: .compile-check-msvc/feature-tests/jthread-stop-token.cpp
+Toolchain: clang-libc++
+Required features: jthread
+
+OK: .compile-check-msvc/feature-tests/ranges-cxx23-adaptors.cpp
+Toolchain: clang-libc++
+Required features: ranges ranges23
+
+OK: .compile-check-msvc/feature-tests/ranges-print-basic.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+FAILED: .compile-check-msvc/feature-tests/std-generator.cpp
+Required features: generator
+No discovered toolchain supports all required features.
+
+OK: cap01/01-complexity-benchmark.cpp
+Toolchain: clang-libc++
+Required features: print format ranges
+
+OK: cap01/04-cache-locality.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap01/05-branchless.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap01/10-archive-seals.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap01/11-doubling-beacon.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap01/12-bell-greetings.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap01/13-watchmaker-runs.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap01/14-observatory-tiles.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap01/15-narrow-gate.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap01/16-two-couriers.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap02/01-aliases.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap02/02-vectors.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap02/03-matrices.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap02/04-span.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap02/05-loops.cpp
+Toolchain: clang-libc++-experimental
+Required features: print ranges ranges23 execution
+
+OK: cap02/06-algorithms.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap02/07-namespaces.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap02/08-frequency-analysis.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap02/09-histogram-exercise.cpp
+Toolchain: clang-libc++
+Required features: print format ranges
+
+OK: cap02/10-prime-vault.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap02/11-lighthouse-columns.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap02/12-market-median.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap02/13-caravan-ledger.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap02/14-river-ledger.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap02/15-mosaic-rows.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap02/16-third-footstep.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap02/17-move-emplace.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap02/18-soa-aos.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap02/19-ranges-demo.cpp
+Toolchain: clang-libc++
+Required features: print ranges ranges23
+
+OK: cap03/01-sync.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap03/02-fread-parser.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap03/03-fstream-expected.cpp
+Toolchain: clang-libc++
+Required features: print expected
+
+OK: cap03/04-mmap.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap03/05-sequence-statistics.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap03/10-two-scribes.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap03/11-ledger-edge.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap03/12-signal-printer.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap03/13-weather-archive.cpp
+Toolchain: clang-libc++
+Required features: print expected
+
+OK: cap03/14-map-room.cpp
+Toolchain: clang-libc++
+Required features: print expected
+
+OK: cap03/15-lantern-config.cpp
+Toolchain: clang-libc++
+Required features: print expected
+
+OK: cap03/16-borrowed-line.cpp
+Toolchain: clang-libc++
+Required features: print expected
+
+OK: cap03/17-expected-monadic.cpp
+Toolchain: clang-libc++
+Required features: print expected expected-monadic
+
+OK: cap04/01-binary-search.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap04/02-binary-search-answers.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap04/03-sort.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap04/04-counting-radix.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap04/05-ranking-exercise.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap04/10-pipeline-sensors.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap04/11-night-pairing.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap04/12-patient-guide.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap04/13-copyist-error.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap04/14-redundant-watch.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap04/15-festival-halls.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap04/16-ink-stamps.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap04/18-comparator-key.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap05/01-prefix-sum.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap05/02-difference-array.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap05/03-sliding-window.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap05/04-sparse-table.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap05/05-kadane-two-pointers.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap05/06-hashing.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap05/06-incremental-update.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap05/07-quickselect-dutch.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap05/08-mos-algorithm.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap05/10-query-exercise.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap05/11-pivot-index.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap05/12-fixed-window-sum.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap05/13-max-decline.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap05/14-tournament-ledger.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap05/15-reactor-cycles.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap05/16-zero-sum-triplets.cpp
+Toolchain: clang-libc++
+Required features: ranges
+
+OK: cap05/17-lantern-ranges.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap05/18-frozen-valley.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap05/19-balanced-expedition.cpp
+Toolchain: clang-libc++
+Required features: ranges
+
+OK: cap05/20-signal-signatures.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap05/21-bitset-observatories.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap05/22-plagiarist-manuscript.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap05/23-apothecary-shelves.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap05/24-bit-cast-byteswap.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap06/01-stack-queue.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap06/02-bst-map.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap06/03-heap.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap06/04-fenwick.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap06/05-segtree.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap06/06-hashtable.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap06/07-dsu.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap06/08-event-scheduler.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap06/09-island-cables.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap06/10-orbiting-songs.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap06/11-aqueduct-pressure.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap06/12-winter-roads.cpp
+Toolchain: clang-libc++
+Required features: ranges
+
+OK: cap06/13-awakening-valleys.cpp
+Toolchain: clang-libc++
+Required features: ranges
+
+OK: cap06/14-watchtower-maximum.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap06/15-parking-lanterns.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap06/16-assoc-lookup.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap07/01-simulation.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap07/02-backtracking.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap07/03-sudoku.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap07/04-meet-in-middle.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap07/05-nqueens-extended.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap07/06-warehouse-robot.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap07/07-signal-orbit.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap07/08-mosaic-paint.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap07/09-echo-subsequence.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap07/10-milk-bells.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap07/11-clockwork-lock.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap07/12-herd-order.cpp
+Toolchain: clang-libc++
+Required features: none
+
+FAILED: cap07/13-generator-combinations.cpp
+Required features: print generator
+No discovered toolchain supports all required features.
+
+FAILED: cap07/14-generator-benchmark.cpp
+Required features: print generator
+No discovered toolchain supports all required features.
+
+OK: cap08/01-memoization-tabulation.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap08/02-knapsack.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap08/03-lis-lcs.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap08/04-matrix-chain.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap08/05-coin-change.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap08/06-grid-min-cost.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap08/07-board-game.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap08/08-golden-route.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap08/09-masked-duel.cpp
+Toolchain: clang-libc++
+Required features: ranges
+
+OK: cap08/10-rising-notes.cpp
+Toolchain: clang-libc++
+Required features: ranges
+
+OK: cap08/11-twin-caravans.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap08/12-festival-canopies.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap08/13-skyward-boxes.cpp
+Toolchain: clang-libc++
+Required features: ranges
+
+OK: cap08/14-merge-ceremony.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap09/01-graph-traversal.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap09/02-shortest-paths.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap09/03-mst.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap09/04-scc-lca.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap09/05-grid-portals-01-bfs.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap09/06-max-flow.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap09/07-rescue-grid.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap09/08-painted-provinces.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap09/09-night-express.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap09/10-clockwork-tasks.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap09/11-longest-trail.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap09/12-silent-junctions.cpp
+Toolchain: clang-libc++
+Required features: ranges
+
+OK: cap09/13-reachability-ledger.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap09/14-ancestral-observatory.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap09/15-royal-roads.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap09/16-csr-vs-adjacency.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap10/01-primes.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap10/02-gcd-modular.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap10/03-combinatorics-mod.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap10/04-counting-representations.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap10/05-square-free.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap10/06-prime-archives.cpp
+Toolchain: clang-libc++
+Required features: ranges
+
+OK: cap10/07-common-rhythm.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap10/08-lantern-powers.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap10/09-divisor-ledger.cpp
+Toolchain: clang-libc++
+Required features: ranges
+
+OK: cap10/10-quiet-gears.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap10/11-inverse-chorus.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap10/12-coprime-handshakes.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap11/01-counting.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap11/02-counting-dp.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap11/03-derangements.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap11/04-moon-staircase.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap11/05-ordered-crew.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap11/06-forbidden-square.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap11/07-misplaced-crowns.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap11/08-banner-arrangements.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap11/09-forbidden-companions.cpp
+Toolchain: clang-libc++
+Required features: ranges
+
+OK: cap11/10-starlight-stalls.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap12/01-kmp-z.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap12/02-suffix-array.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap12/03-trie.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap12/04-anagram-window.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap12/05-aho-corasick.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap12/06-signal-echoes.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap12/07-clockwork-refrain.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap12/08-mirror-ledger.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap12/09-shared-oaths.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap12/10-name-registry.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap12/11-prefix-observatory.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap12/12-returning-names.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap13/01-vectors-cross.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap13/02-convex-hull.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap13/03-closest-pair.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap13/04-festival-shadows.cpp
+Toolchain: clang-libc++
+Required features: ranges
+
+OK: cap13/05-overlapping-maps.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap13/06-border-patrol.cpp
+Toolchain: clang-libc++
+Required features: ranges
+
+OK: cap13/07-secret-courtyards.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap13/08-nearest-lanterns.cpp
+Toolchain: clang-libc++
+Required features: ranges
+
+OK: cap13/09-surveyors-parchment.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap13/10-crossing-threads.cpp
+Toolchain: clang-libc++
+Required features: ranges
+
+OK: cap14/01-tsp-bitmask.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap14/02-approximation.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap14/03-independent-set.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap14/04-midnight-courier.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap14/05-gatekeepers-oath.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap14/06-glass-map.cpp
+Toolchain: clang-libc++
+Required features: ranges
+
+OK: cap14/07-expedition-crates.cpp
+Toolchain: clang-libc++
+Required features: ranges
+
+OK: cap14/08-festival-partners.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap14/09-silent-watch.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap14/10-library-seals.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap15/01-ad-hoc.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap15/02-contest-strategy.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap15/03-foundry-molds.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap15/04-sunstone-power.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap15/05-banner-procession.cpp
+Toolchain: clang-libc++
+Required features: ranges
+
+OK: cap15/06-last-navigator.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap15/07-lantern-inspections.cpp
+Toolchain: clang-libc++
+Required features: ranges
+
+OK: cap15/08-ring-of-tides.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap15/09-clockwork-register.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap16/01-threads.cpp
+Toolchain: clang-libc++
+Required features: print jthread
+
+OK: cap16/02-mutex-sync.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap16/03-async-future.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap16/04-parallel-algorithms.cpp
+Toolchain: clang-libc++-experimental
+Required features: print execution
+
+OK: cap16/05-coroutines.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap16/06-parallel-prefix.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap16/07-observatory-counter.cpp
+Toolchain: clang-libc++
+Required features: jthread
+
+OK: cap16/08-treasury-ledger.cpp
+Toolchain: clang-libc++
+Required features: jthread
+
+OK: cap16/09-workshop-channel.cpp
+Toolchain: clang-libc++
+Required features: jthread
+
+OK: cap16/10-archive-blocks.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap16/11-stained-glass.cpp
+Toolchain: clang-libc++-experimental
+Required features: execution
+
+OK: cap16/12-clockwork-stream.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap16/13-weather-census.cpp
+Toolchain: clang-libc++
+Required features: jthread
+
+OK: cap16/14-false-sharing.cpp
+Toolchain: clang-libc++
+Required features: print jthread
+
+OK: cap18/a1-01-paper-mill.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/a1-02-wool-market.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap18/a1-03-quarry-map.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/a2-01-pigeon-post.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/a2-02-windmill-quota.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap18/a2-03-cooper-stock.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/a2-04-chandler-crates.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap18/a3-01-tandem-kayaks.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap18/a3-02-fairground-stages.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap18/a3-03-chapel-pews.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/a3-04-counting-tape.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/a3-05-parade-disorder.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap18/a4-01-parlor-word-chain.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/a4-02-cloister-tiles.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/a4-03-bindery-shifts.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap18/a4-04-cellar-log.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap18/a4-05-auction-paddles.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap18/a4-06-mine-galleries.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/a5-01-crown-subsidies.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/a5-02-olive-jars.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/a5-03-quarrelsome-jury.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/a5-04-harbor-witnesses.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/a5-05-amphitheater-rows.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/a5-06-pursers-split.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/a5-07-alchemists-shelf.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/a6-01-festival-favors.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/a6-02-mapmakers-title.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/a6-03-flooded-crossings.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/a6-04-caravan-passes.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/a6-05-astronomers-cycle.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/a6-06-muleteers-packs.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/a6-07-fishmongers-week.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/a6-08-seismograph-roll.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/a7-01-survey-ribbons.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/a7-02-patent-drawers.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/a7-03-tram-repair-list.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/a7-04-paper-guillotine.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/a7-05-glasshouse-aisle.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/a7-06-parcel-windows.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap18/a7-07-token-counter.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/a7-08-permit-numbers.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/a7-09-proofreaders-needle.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/a8-01-council-rotation.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/a8-02-counter-hall.cpp
+Toolchain: clang-libc++
+Required features: print jthread
+
+OK: cap18/a8-03-proofing-shards.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/a8-04-packet-batches.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/a8-05-turntable-tickets.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/a8-06-editors-distance.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/a8-07-switch-corridor.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/a8-08-inverse-ledger.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/a8-09-stone-outline.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/a8-10-relic-tour.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t01-s1-1-cistern-keeper.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t01-s2-1-kilnmaster-bill.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t01-s3-1-forge-trials.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t01-s3-2-star-atlas.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t01-s4-1-hourglass-walk.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t01-s4-2-two-ferries.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap18/t01-s4-3-usurper-coin.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t02-s1-1-orchard-rows.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t02-s2-1-vineyard-terraces.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t02-s3-1-apiary-census.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t02-s3-2-bakery-shelf.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t02-s4-1-falconry-roster.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap18/t02-s4-2-salt-lagoon.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t02-s4-3-ropewalk-ledger.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t03-s1-1-telegraph-counter.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t03-s2-1-town-crier.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap18/t03-s3-1-adding-machine.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t03-s3-2-apothecary-doses.cpp
+Toolchain: clang-libc++
+Required features: print expected
+
+OK: cap18/t03-s4-1-loom-inspector.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t03-s4-2-granary-sheet.cpp
+Toolchain: clang-libc++
+Required features: print expected
+
+OK: cap18/t03-s4-3-glacier-gauge.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t04-s1-1-mile-stones.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap18/t04-s2-1-watchfires.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap18/t04-s3-1-choir-lofts.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap18/t04-s3-2-toll-board.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap18/t04-s4-1-regatta-standings.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap18/t04-s4-2-rotated-psalter.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap18/t04-s4-3-kite-strings.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap18/t05-s1-1-dredging-crews.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t05-s2-1-fermentation-log.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t05-s3-1-tinkers-road.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t05-s3-2-porters-span.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t05-s4-1-riverbed-survey.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t05-s4-2-twin-inscriptions.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t05-s4-3-seed-bank.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap18/t06-s1-1-sawmill-queue.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t06-s2-1-box-office-row.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t06-s3-1-chimney-line.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t06-s3-2-rope-bridges.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t06-s4-1-cloakroom-hooks.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t06-s4-2-fountain-mains.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap18/t06-s4-3-rampart-torches.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t07-s1-1-hotel-lift.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t07-s2-1-smouldering-meadow.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t07-s3-1-tasting-menu.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t07-s3-2-spice-scale.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t07-s4-1-sprinkler-garden.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t07-s4-2-milk-churns.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t07-s4-3-ballast-stones.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap18/t08-s1-1-stepping-stones.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t08-s2-1-peddlers-pack.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t08-s3-1-tram-fare.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t08-s3-2-pearl-strand.cpp
+Toolchain: clang-libc++
+Required features: print ranges
+
+OK: cap18/t08-s4-1-notarys-copies.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t08-s4-2-arcade-tokens.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t08-s4-3-charcoal-heaps.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t09-s1-1-postmans-districts.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t09-s2-1-stagecoach-lines.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t09-s3-1-banquet-prep.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap18/t09-s3-2-wedding-tables.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t09-s4-1-lamplighters-route.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t09-s4-2-gossip-circuit.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t09-s4-3-ranger-outposts.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap18/t10-s1-1-drapers-bolts.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t10-s2-1-numerologists-street.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t10-s3-1-yeast-vats.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t10-s3-2-schoolmasters-blocks.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t10-s4-1-customs-serials.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap18/t10-s4-2-junction-timetable.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t10-s4-3-garrison-drafts.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap18/t11-s1-1-almoners-loaves.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t11-s2-1-portrait-gallery.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t11-s3-1-switchyard-wagons.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t11-s3-2-chancery-seals.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t11-s4-1-parquet-workshop.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t11-s4-2-night-patrols.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t11-s4-3-scriptorium-inkpots.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t12-s1-1-lighthouse-logbook.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t12-s2-1-carillon-phrase.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t12-s3-1-typesetters-tray.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t12-s3-2-innkeepers-guestbook.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t12-s4-1-beacon-codes.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t12-s4-2-engravers-band.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t12-s4-3-censors-list.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t13-s1-1-tithe-field.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t13-s2-1-sheepfold-stakes.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t13-s3-1-drainage-ditches.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t13-s3-2-tiltyard-fence.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t13-s4-1-scouts-reckoning.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t13-s4-2-well-diggers.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t13-s4-3-canal-grid.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t14-s1-1-ironmongers-bundles.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t14-s2-1-grinders-circuit.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t14-s3-1-atlas-inks.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t14-s3-2-anvil-roster.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t14-s4-1-quiet-council.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t14-s4-2-pressroom-belts.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t14-s4-3-studio-switchboard.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t15-s1-1-marzipan-tower.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t15-s2-1-billboard-plates.cpp
+Toolchain: clang-libc++
+Required features: none
+
+OK: cap18/t15-s3-1-assembly-ring.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t15-s3-2-carousel-accounts.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t15-s4-1-awning-pins.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t15-s4-2-candle-exponent.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t15-s4-3-counting-stamp.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t16-s1-1-turnstile-clicks.cpp
+Toolchain: clang-libc++
+Required features: print jthread
+
+OK: cap18/t16-s2-1-vault-transfers.cpp
+Toolchain: clang-libc++
+Required features: jthread
+
+OK: cap18/t16-s3-1-archive-totals.cpp
+Toolchain: clang-libc++
+Required features: print
+
+OK: cap18/t16-s3-2-workshop-queue.cpp
+Toolchain: clang-libc++
+Required features: print jthread
+
+OK: cap18/t16-s4-1-registry-search.cpp
+Toolchain: clang-libc++
+Required features: print jthread
+
+OK: cap18/t16-s4-2-ledger-prefix.cpp
+Toolchain: clang-libc++
+Required features: jthread
+
+OK: cap18/t16-s4-3-sequence-metronome.cpp
+Toolchain: clang-libc++
+Required features: none
+
+
+Compilation finished: 382 passed, 3 failed.
+Toolchain usage:
+  clang-libc++: 378
+  clang-libc++-experimental: 4
+  clang-libstdc++: 0
+  clang-libstdc++-tbb: 0
