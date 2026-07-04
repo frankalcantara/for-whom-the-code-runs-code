@@ -25,7 +25,8 @@
 // EDGE CASES: g = 0 (zero turns, the loop must not execute); g = 1 (one
 //   turn); powers of two (halvings only); g = 1e18 (worst case ~90 turns).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o hourglass t01-s4-1-hourglass-walk.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o hourglass t01-s4-1-hourglass-walk.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fehourglass.exe t01-s4-1-hourglass-walk.cpp
 
 #include <cstdint>
 #include <iostream>

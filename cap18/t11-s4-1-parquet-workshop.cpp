@@ -29,7 +29,8 @@
 //   pair, horizontal pair, inlay: 3); n = 3 (5, the example);
 //   n = 1e6 (loop, no table needed).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o parquet t11-s4-1-parquet-workshop.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o parquet t11-s4-1-parquet-workshop.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feparquet.exe t11-s4-1-parquet-workshop.cpp
 
 #include <iostream>
 #include <print>

@@ -1,6 +1,7 @@
 // cap11/03-derangements.cpp
 // Solved exercise: derangements and permutations with exactly k fixed points.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o derangements 03-derangements.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o derangements 03-derangements.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Federangements.exe 03-derangements.cpp
 
 #include <cassert>
 #include <print>

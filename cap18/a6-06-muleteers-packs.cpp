@@ -36,7 +36,8 @@
 //   duplicate weights; the join where the best A-sum takes no
 //   B-partner but a worse one does (the per-x search handles it).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o packs a6-06-muleteers-packs.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o packs a6-06-muleteers-packs.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fepacks.exe a6-06-muleteers-packs.cpp
 
 #include <algorithm>
 #include <cstdint>

@@ -32,7 +32,8 @@
 //   n = 1 (1); k > n impossible by constraints; n = k = 5000
 //   (diagonal: 1, exercises the table bounds).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o patrols t11-s4-2-night-patrols.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o patrols t11-s4-2-night-patrols.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fepatrols.exe t11-s4-2-night-patrols.cpp
 
 #include <cstddef>
 #include <iostream>

@@ -36,7 +36,8 @@
 //   min(c_1, c_2)); equal tolls everywhere (any maximal-hop path);
 //   maximum n with maximum tolls (overflow drill).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o stones t08-s1-1-stepping-stones.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o stones t08-s1-1-stepping-stones.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Festones.exe t08-s1-1-stepping-stones.cpp
 
 #include <algorithm>
 #include <iostream>

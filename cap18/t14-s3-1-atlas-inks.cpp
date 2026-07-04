@@ -37,7 +37,8 @@
 //   it; 2 would not); disconnected graphs (BFS per component);
 //   n = 1 or 2 (always YES).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o inks t14-s3-1-atlas-inks.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o inks t14-s3-1-atlas-inks.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feinks.exe t14-s3-1-atlas-inks.cpp
 
 #include <bit>
 #include <cstdint>

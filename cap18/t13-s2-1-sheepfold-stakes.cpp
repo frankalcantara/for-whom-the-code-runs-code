@@ -39,7 +39,8 @@
 //   collapses them via cross = 0 pops); the full-range square
 //   (the 8e18 ceiling exercised); a hull of exactly 3 points.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o sheepfold t13-s2-1-sheepfold-stakes.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o sheepfold t13-s2-1-sheepfold-stakes.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fesheepfold.exe t13-s2-1-sheepfold-stakes.cpp
 
 #include <algorithm>
 #include <iostream>

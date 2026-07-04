@@ -24,7 +24,8 @@
 // EDGE CASES: S = 0; zero-valued benches; one bench; no positive
 //   value fits; the whole row fits.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o aisle a7-05-glasshouse-aisle.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o aisle a7-05-glasshouse-aisle.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feaisle.exe a7-05-glasshouse-aisle.cpp
 
 #include <algorithm>
 #include <iostream>

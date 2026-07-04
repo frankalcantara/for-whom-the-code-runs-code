@@ -28,7 +28,8 @@
 //   `/4` and `5/` and an empty line (bad format); negative a with exact
 //   and inexact division; b = 1; the maximum magnitudes.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o doses t03-s3-2-apothecary-doses.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o doses t03-s3-2-apothecary-doses.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fedoses.exe t03-s3-2-apothecary-doses.cpp
 
 #include <expected>
 #include <iostream>

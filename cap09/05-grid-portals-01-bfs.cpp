@@ -8,7 +8,8 @@
 // Model: graph with weights 0 (portal) and 1 (normal move).
 // Algorithm: 0-1 BFS with deque -- O(V + E) instead of Dijkstra O(E log V).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o grid_portals 05-grid-portals-01-bfs.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o grid_portals 05-grid-portals-01-bfs.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fegrid_portals.exe 05-grid-portals-01-bfs.cpp
 
 #include <cassert>
 #include <climits>

@@ -1,6 +1,7 @@
 // cap06/02-bst-map.cpp
 // std::set, std::map, std::flat_map (C++23) -- ordered containers and cache-friendly variants.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o bst_map 02-bst-map.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o bst_map 02-bst-map.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Febst_map.exe 02-bst-map.cpp
 
 #include <algorithm>
 #include <cassert>
@@ -11,7 +12,7 @@
 #include <string>
 #include <vector>
 
-// std::flat_map/flat_set: C++23, GCC 13+
+// std::flat_map/flat_set: C++23; standard-library support varies
 // Commented out for compatibility with older standard libraries; enable in a complete C++23 environment.
 // #include <flat_map>
 

@@ -39,7 +39,8 @@
 //   a divides b; coprime bolts (pieces of length 1, a + b of them -
 //   the 2e18 fit); a = b = 1; a = b = 1e18 (count 2, no overflow).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o bolts t10-s1-1-drapers-bolts.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o bolts t10-s1-1-drapers-bolts.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Febolts.exe t10-s1-1-drapers-bolts.cpp
 
 #include <iostream>
 #include <numeric>

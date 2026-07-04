@@ -32,7 +32,8 @@
 //   the middle flanked by losses; alternating signs (the example);
 //   sums at +-1e15.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o week a6-07-fishmongers-week.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o week a6-07-fishmongers-week.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feweek.exe a6-07-fishmongers-week.cpp
 
 #include <algorithm>
 #include <iostream>

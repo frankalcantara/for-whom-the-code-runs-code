@@ -34,7 +34,8 @@
 //   silence, harmless: the vertex is already visited); parallel paths
 //   (revisits are skipped by the mark).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o districts t09-s1-1-postmans-districts.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o districts t09-s1-1-postmans-districts.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fedistricts.exe t09-s1-1-postmans-districts.cpp
 
 #include <iostream>
 #include <print>

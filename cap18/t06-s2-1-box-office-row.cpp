@@ -31,7 +31,8 @@
 // EDGE CASES: query of a single window (l = r); query of the full row;
 //   repeated updates to the same window; a_i = 0 start; the 4e14 total.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o boxoffice t06-s2-1-box-office-row.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o boxoffice t06-s2-1-box-office-row.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feboxoffice.exe t06-s2-1-box-office-row.cpp
 
 #include <iostream>
 #include <print>

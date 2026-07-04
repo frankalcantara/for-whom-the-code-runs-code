@@ -23,7 +23,8 @@
 // EDGE CASES: k == n (single window); k == 1 (the answer is the maximum
 //   element); all warmths negative; ties between windows.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o bakery t02-s3-2-bakery-shelf.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o bakery t02-s3-2-bakery-shelf.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Febakery.exe t02-s3-2-bakery-shelf.cpp
 
 #include <iostream>
 #include <print>

@@ -4,7 +4,8 @@
 // Naive layer: O(n) per query.
 // Algorithmic layer: Fenwick (counting) + set (conflict detection) -- O(log n).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o event_scheduler 08-event-scheduler.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o event_scheduler 08-event-scheduler.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feevent_scheduler.exe 08-event-scheduler.cpp
 
 #include <cassert>
 #include <climits>

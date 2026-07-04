@@ -25,7 +25,8 @@
 //   values equal; the warm-up being the global minimum (it must still be
 //   discarded); a value exactly 10% above the minimum (faithful).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o forge t01-s3-1-forge-trials.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o forge t01-s3-1-forge-trials.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feforge.exe t01-s3-1-forge-trials.cpp
 
 #include <iostream>
 #include <print>

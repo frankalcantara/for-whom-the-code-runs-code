@@ -5,7 +5,8 @@
 // Naive: scan all service windows, O(n*k).
 // Algorithmic: min-heap of (free_time, window_id), O(n log k).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o simulation 01-simulation.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o simulation 01-simulation.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fesimulation.exe 01-simulation.cpp
 
 #include <algorithm>
 #include <cassert>

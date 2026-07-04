@@ -4,7 +4,8 @@
 // Measured finding: using the key as a projection is only slightly faster than
 // the branchy comparator; the real win comes from materializing the encoded
 // keys into a contiguous array and sorting that array directly.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o comparator-key 18-comparator-key.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o comparator-key 18-comparator-key.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fecomparator-key.exe 18-comparator-key.cpp
 
 #include <algorithm>
 #include <chrono>

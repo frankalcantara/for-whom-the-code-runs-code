@@ -29,7 +29,8 @@
 //   first occurrence wins); a tie between two blocks in the same row
 //   (smaller column must win); all-zero grid (answer 1 1 0).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o quarry a1-03-quarry-map.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o quarry a1-03-quarry-map.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fequarry.exe a1-03-quarry-map.cpp
 
 #include <iostream>
 #include <print>

@@ -29,7 +29,8 @@
 //   (stability irrelevant, order by points); two equal-point boats
 //   adjacent in input but far apart in points rank; n = 1.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o regatta t04-s4-1-regatta-standings.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o regatta t04-s4-1-regatta-standings.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feregatta.exe t04-s4-1-regatta-standings.cpp
 
 #include <algorithm>
 #include <iostream>

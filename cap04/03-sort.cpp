@@ -1,6 +1,7 @@
 // cap04/03-sort.cpp
 // std::sort, std::stable_sort, comparators, projections, std::ranges::sort.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o sort_demo 03-sort.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o sort_demo 03-sort.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fesort_demo.exe 03-sort.cpp
 
 #include <algorithm>
 #include <cassert>

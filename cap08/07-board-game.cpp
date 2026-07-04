@@ -23,7 +23,8 @@
 // Source: CodeVita competitive programming contest, Phase 1 (2024).
 //   Original C++ solution by the course team, rewritten in C++23.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o board_game 07-board-game.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o board_game 07-board-game.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feboard_game.exe 07-board-game.cpp
 
 #include <algorithm>   // std::min
 #include <cassert>

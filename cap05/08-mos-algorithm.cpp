@@ -3,7 +3,8 @@
 // Problem: for each query [l,r], compute the sum of the elements.
 // (Prefix sum would solve this specific aggregate; this file demonstrates the pattern.)
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o mos 08-mos-algorithm.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o mos 08-mos-algorithm.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Femos.exe 08-mos-algorithm.cpp
 // Test:    printf "5 3\n1 2 3 4 5\n0 2\n1 3\n2 4\n" | ./mos
 
 #include <algorithm>

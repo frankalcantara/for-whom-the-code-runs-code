@@ -16,7 +16,8 @@
 //   too slow.
 // EDGE CASES: equal values; sorted input; reverse sorted input.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o tickets a8-05-turntable-tickets.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o tickets a8-05-turntable-tickets.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fetickets.exe a8-05-turntable-tickets.cpp
 
 #include <algorithm>
 #include <cstdint>

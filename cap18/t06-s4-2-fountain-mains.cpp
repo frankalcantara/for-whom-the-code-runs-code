@@ -33,7 +33,8 @@
 //   by the same test); already-spanning prefix (later mains all
 //   rejected); the 2e14 total.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o fountains t06-s4-2-fountain-mains.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o fountains t06-s4-2-fountain-mains.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fefountains.exe t06-s4-2-fountain-mains.cpp
 
 #include <algorithm>
 #include <iostream>

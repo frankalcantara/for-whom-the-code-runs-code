@@ -38,7 +38,8 @@
 //   it as a same-color edge); even cycles (possible); two odd cycles
 //   in different components; duplicate feud pairs (idempotent).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o tables t09-s3-2-wedding-tables.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o tables t09-s3-2-wedding-tables.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fetables.exe t09-s3-2-wedding-tables.cpp
 
 #include <iostream>
 #include <print>

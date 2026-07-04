@@ -1,6 +1,7 @@
 // cap10/01-primes.cpp
 // Primality, the Sieve of Eratosthenes, and factorization.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o primes 01-primes.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o primes 01-primes.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feprimes.exe 01-primes.cpp
 
 #include <cassert>
 #include <algorithm>

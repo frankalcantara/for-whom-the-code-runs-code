@@ -24,7 +24,8 @@
 //   constraints, but s_i = T = 1 can; a machine with p_i = 1e9 and
 //   s_i = 1 contributing the bulk of the total.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o papermill a1-01-paper-mill.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o papermill a1-01-paper-mill.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fepapermill.exe a1-01-paper-mill.cpp
 
 #include <iostream>
 #include <print>

@@ -1,6 +1,7 @@
 // cap12/03-trie.cpp
 // Prefix trie for strings and bitwise trie for maximum XOR queries.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o trie 03-trie.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o trie 03-trie.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fetrie.exe 03-trie.cpp
 
 #include <array>
 #include <cassert>

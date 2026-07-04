@@ -30,7 +30,8 @@
 //   no zero stretch at all; a single day of value 0; stretches starting on
 //   day 1 (this is why P_0 = 0 must be counted as an occurrence).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o ropewalk t02-s4-3-ropewalk-ledger.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o ropewalk t02-s4-3-ropewalk-ledger.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feropewalk.exe t02-s4-3-ropewalk-ledger.cpp
 
 #include <iostream>
 #include <print>

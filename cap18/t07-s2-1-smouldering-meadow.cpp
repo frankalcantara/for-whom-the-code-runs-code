@@ -35,7 +35,8 @@
 //   impossible by the input contract (B and * both exist), but 1 x 2
 //   "*B" works (answer 1); fire that must snake around a rock spiral.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o meadow t07-s2-1-smouldering-meadow.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o meadow t07-s2-1-smouldering-meadow.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Femeadow.exe t07-s2-1-smouldering-meadow.cpp
 
 #include <iostream>
 #include <print>

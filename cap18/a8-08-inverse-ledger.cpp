@@ -14,7 +14,8 @@
 //   for a prime modulus.
 // EDGE CASES: a=0; b larger than p; b mod p = 1.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o inverse a8-08-inverse-ledger.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o inverse a8-08-inverse-ledger.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feinverse.exe a8-08-inverse-ledger.cpp
 
 #include <cstdint>
 #include <iostream>

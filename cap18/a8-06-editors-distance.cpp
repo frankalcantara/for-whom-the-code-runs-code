@@ -16,7 +16,8 @@
 //   here.
 // EDGE CASES: equal strings; length-one strings; all replacements.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o distance a8-06-editors-distance.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o distance a8-06-editors-distance.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fedistance.exe a8-06-editors-distance.cpp
 
 #include <algorithm>
 #include <iostream>

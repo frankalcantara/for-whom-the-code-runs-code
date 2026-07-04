@@ -26,7 +26,8 @@
 // EDGE CASES: n = 1; all tags equal; all tags distinct (every count 1, the
 //   smallest tag wins); the winner appearing last in the input.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o apiary t02-s3-1-apiary-census.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o apiary t02-s3-1-apiary-census.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feapiary.exe t02-s3-1-apiary-census.cpp
 
 #include <iostream>
 #include <print>

@@ -34,7 +34,8 @@
 //   chains (the example, and aaaa/aa -> 3); w absent (0); w longer
 //   than s excluded by constraints.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o logbook t12-s1-1-lighthouse-logbook.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o logbook t12-s1-1-lighthouse-logbook.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Felogbook.exe t12-s1-1-lighthouse-logbook.cpp
 
 #include <iostream>
 #include <print>

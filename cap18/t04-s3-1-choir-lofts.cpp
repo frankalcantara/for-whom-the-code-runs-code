@@ -27,7 +27,8 @@
 //   (50 and 250 must index correctly); n = 1; an input already sorted
 //   (no special case, the counts do not care).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o choir t04-s3-1-choir-lofts.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o choir t04-s3-1-choir-lofts.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fechoir.exe t04-s3-1-choir-lofts.cpp
 
 #include <array>
 #include <iostream>

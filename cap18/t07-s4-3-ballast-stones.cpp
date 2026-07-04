@@ -38,7 +38,8 @@
 //   weights larger (0); duplicate weights; the exact-fit case where
 //   the answer equals C.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o ballast t07-s4-3-ballast-stones.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o ballast t07-s4-3-ballast-stones.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feballast.exe t07-s4-3-ballast-stones.cpp
 
 #include <algorithm>
 #include <bit>

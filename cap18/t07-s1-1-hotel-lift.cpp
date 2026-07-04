@@ -31,7 +31,8 @@
 //   approach); maximum floors with maximum n (overflow check on the
 //   accumulator).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o lift t07-s1-1-hotel-lift.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o lift t07-s1-1-hotel-lift.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Felift.exe t07-s1-1-hotel-lift.cpp
 
 #include <cstdlib>
 #include <iostream>

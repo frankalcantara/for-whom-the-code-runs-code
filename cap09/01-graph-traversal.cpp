@@ -1,6 +1,7 @@
 // cap09/01-graph-traversal.cpp
 // Graph representations, iterative DFS, BFS, components, and topological sort.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o graph_traversal 01-graph-traversal.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o graph_traversal 01-graph-traversal.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fegraph_traversal.exe 01-graph-traversal.cpp
 
 #include <algorithm>
 #include <cassert>

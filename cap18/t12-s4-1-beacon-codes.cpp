@@ -33,7 +33,8 @@
 //   a code of 0 against the maximum (answer = maximum); duplicate
 //   codes (trie holds both harmlessly); codes touching 2^30 - 1.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o beacons t12-s4-1-beacon-codes.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o beacons t12-s4-1-beacon-codes.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Febeacons.exe t12-s4-1-beacon-codes.cpp
 
 #include <algorithm>
 #include <array>

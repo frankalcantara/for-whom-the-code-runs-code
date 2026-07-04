@@ -5,7 +5,8 @@
 // Part 2: generate the first solution as a grid.
 // Part 3: count solutions for n=1..12 and verify against known values.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o nqueens_extended 05-nqueens-extended.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o nqueens_extended 05-nqueens-extended.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fenqueens_extended.exe 05-nqueens-extended.cpp
 
 #include <cassert>
 #include <bit>

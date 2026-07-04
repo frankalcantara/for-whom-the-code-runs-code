@@ -26,7 +26,8 @@
 //   coverage; n = 1; duplicate categories are excluded by the
 //   statement; several drawers with identical coverage.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o drawers a7-02-patent-drawers.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o drawers a7-02-patent-drawers.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fedrawers.exe a7-02-patent-drawers.cpp
 
 #include <algorithm>
 #include <cstdint>

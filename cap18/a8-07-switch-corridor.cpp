@@ -16,7 +16,8 @@
 //   O(m log n).
 // EDGE CASES: unreachable target; n=1; all zero edges.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o corridor a8-07-switch-corridor.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o corridor a8-07-switch-corridor.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fecorridor.exe a8-07-switch-corridor.cpp
 
 #include <deque>
 #include <iostream>

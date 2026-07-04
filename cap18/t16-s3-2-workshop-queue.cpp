@@ -21,7 +21,8 @@
 //   arrival.
 // EDGE CASES: n = 0; p > n; negative costs; spurious wakeups.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -pthread -o queue t16-s3-2-workshop-queue.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -pthread -o queue t16-s3-2-workshop-queue.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fequeue.exe t16-s3-2-workshop-queue.cpp
 
 #include <atomic>
 #include <condition_variable>

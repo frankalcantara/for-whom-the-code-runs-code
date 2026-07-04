@@ -25,7 +25,8 @@
 //   distinct (answer 1); the longest run at the very end of the bolt (the
 //   final comparison must not be skipped).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o loom t03-s4-1-loom-inspector.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o loom t03-s4-1-loom-inspector.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feloom.exe t03-s4-1-loom-inspector.cpp
 
 #include <cstdio>
 #include <print>

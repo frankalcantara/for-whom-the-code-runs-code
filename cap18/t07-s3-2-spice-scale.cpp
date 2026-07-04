@@ -34,7 +34,8 @@
 //   weights on the right); representable only with subtraction (the
 //   example); unreachable w (parity or gap); n = 1; duplicate weights.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o scale t07-s3-2-spice-scale.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o scale t07-s3-2-spice-scale.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fescale.exe t07-s3-2-spice-scale.cpp
 
 #include <cstdlib>
 #include <iostream>

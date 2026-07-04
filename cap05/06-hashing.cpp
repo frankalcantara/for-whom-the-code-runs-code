@@ -1,6 +1,6 @@
 // cap05/06-hashing.cpp
 // Prefix hash and rolling hash (Rabin-Karp) for O(1) substring comparison.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o hashing 06-hashing.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o hashing 06-hashing.cpp
 
 #include <cassert>
 #include <cstdint>

@@ -1,7 +1,8 @@
 // cap03/01-sync.cpp
 // Standard I/O optimization: sync_with_stdio, cin.tie, '\n' vs endl
 // Benchmark: measure cin/cout overhead before and after optimization
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o sync 01-sync.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o sync 01-sync.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fesync.exe 01-sync.cpp
 
 #include <array>
 #include <chrono>

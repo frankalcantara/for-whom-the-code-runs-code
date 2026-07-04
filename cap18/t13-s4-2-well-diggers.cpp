@@ -37,7 +37,8 @@
 //   exercising 8e18; clustered points where the strip holds
 //   everything (the packing bound is what saves the run time).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o wells t13-s4-2-well-diggers.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o wells t13-s4-2-well-diggers.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fewells.exe t13-s4-2-well-diggers.cpp
 
 #include <algorithm>
 #include <iostream>

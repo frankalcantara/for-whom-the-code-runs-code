@@ -32,7 +32,8 @@
 //   (n stages); back-to-back acts e = s (one stage, the boundary case);
 //   n = 1; identical intervals repeated.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o stages a3-02-fairground-stages.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o stages a3-02-fairground-stages.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Festages.exe a3-02-fairground-stages.cpp
 
 #include <algorithm>
 #include <functional>

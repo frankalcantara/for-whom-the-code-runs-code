@@ -39,7 +39,8 @@
 //   consecutive updates with no query between (tags stack); query on a
 //   region never updated; n = 1.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o rampart t06-s4-3-rampart-torches.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o rampart t06-s4-3-rampart-torches.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Ferampart.exe t06-s4-3-rampart-torches.cpp
 
 #include <algorithm>
 #include <iostream>

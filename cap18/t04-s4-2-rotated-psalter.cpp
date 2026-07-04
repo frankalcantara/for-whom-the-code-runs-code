@@ -30,7 +30,8 @@
 //   answer 0); rotation n-1 (minimum at the last position); n = 1
 //   (answer 0); two pages.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o psalter t04-s4-2-rotated-psalter.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o psalter t04-s4-2-rotated-psalter.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fepsalter.exe t04-s4-2-rotated-psalter.cpp
 
 #include <iostream>
 #include <print>

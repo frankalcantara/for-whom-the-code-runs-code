@@ -10,7 +10,8 @@
 //
 // Rolling array: O(m) space for each DP field.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o grid_min_cost 06-grid-min-cost.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o grid_min_cost 06-grid-min-cost.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fegrid_min_cost.exe 06-grid-min-cost.cpp
 
 #include <cassert>
 #include <climits>

@@ -41,7 +41,8 @@
 //   (the DP must delay touching it); maximum n and weights (the
 //   overflow drill in TYPES).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o heaps t08-s4-3-charcoal-heaps.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o heaps t08-s4-3-charcoal-heaps.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feheaps.exe t08-s4-3-charcoal-heaps.cpp
 
 #include <algorithm>
 #include <iostream>

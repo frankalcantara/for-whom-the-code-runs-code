@@ -40,7 +40,8 @@
 //   exists (the example, reversed); parallel lit/dark streets between
 //   the same corners.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o lamplighter t09-s4-1-lamplighters-route.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o lamplighter t09-s4-1-lamplighters-route.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Felamplighter.exe t09-s4-1-lamplighters-route.cpp
 
 #include <deque>
 #include <iostream>

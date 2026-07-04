@@ -5,7 +5,8 @@
 // Problem: given humidity[], process q operations of the form (val, idx).
 // Each operation adds val to humidity[idx] and returns the sum of even values.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o incremental 06-incremental-update.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o incremental 06-incremental-update.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feincremental.exe 06-incremental-update.cpp
 
 #include <cassert>
 #include <chrono>

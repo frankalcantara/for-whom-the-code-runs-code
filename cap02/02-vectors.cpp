@@ -1,6 +1,7 @@
 // cap02/02-vectors.cpp
 // std::vector: construction, access, common contest operations
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o vectors 02-vectors.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o vectors 02-vectors.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fevectors.exe 02-vectors.cpp
 
 #include <algorithm>
 #include <numeric>

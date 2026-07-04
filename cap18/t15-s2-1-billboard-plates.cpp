@@ -30,7 +30,8 @@
 // EDGE CASES: all plates are 0 (print one 0); equal comparator pairs
 //   such as 12 and 1212; one plate; long common prefixes.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o plates t15-s2-1-billboard-plates.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o plates t15-s2-1-billboard-plates.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feplates.exe t15-s2-1-billboard-plates.cpp
 
 #include <algorithm>
 #include <iostream>

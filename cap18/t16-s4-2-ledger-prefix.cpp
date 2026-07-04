@@ -23,7 +23,8 @@
 //   small n; full tree-based scan is more parallel but longer.
 // EDGE CASES: p > n; n = 1; negative values; zero block offsets.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -pthread -o prefix t16-s4-2-ledger-prefix.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -pthread -o prefix t16-s4-2-ledger-prefix.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feprefix.exe t16-s4-2-ledger-prefix.cpp
 
 #include <algorithm>
 #include <cstdint>

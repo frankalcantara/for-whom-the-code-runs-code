@@ -21,7 +21,8 @@
 // EDGE CASES: p > n; negative values; one value; cancellation is not
 //   involved because every block is needed.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -pthread -o totals t16-s3-1-archive-totals.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -pthread -o totals t16-s3-1-archive-totals.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fetotals.exe t16-s3-1-archive-totals.cpp
 
 #include <algorithm>
 #include <cstdint>

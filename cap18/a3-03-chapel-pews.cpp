@@ -28,7 +28,8 @@
 // EDGE CASES: l = 1 (P[0] = 0 must exist); l = r; the whole row;
 //   pledges of 0 (a zero answer is legal); the 2e14 total.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o pews a3-03-chapel-pews.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o pews a3-03-chapel-pews.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fepews.exe a3-03-chapel-pews.cpp
 
 #include <iostream>
 #include <print>

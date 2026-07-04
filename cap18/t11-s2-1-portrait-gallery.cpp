@@ -30,7 +30,8 @@
 //   one portrait cannot be wrong alone: 0, via D(1) = 0); m = 0
 //   (full derangement D(n)); n = 1 with m = 0 (0) and m = 1 (1).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o gallery t11-s2-1-portrait-gallery.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o gallery t11-s2-1-portrait-gallery.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fegallery.exe t11-s2-1-portrait-gallery.cpp
 
 #include <iostream>
 #include <print>

@@ -23,7 +23,8 @@
 // EDGE CASES: n = 0; target absent; target appears many times; p >
 //   n; target at the first or last position.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -pthread -o search t16-s4-1-registry-search.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -pthread -o search t16-s4-1-registry-search.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fesearch.exe t16-s4-1-registry-search.cpp
 
 #include <algorithm>
 #include <atomic>

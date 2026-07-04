@@ -32,7 +32,8 @@
 //   as a border (e.g. abca... still counted - "elsewhere" includes
 //   the end).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o title a6-02-mapmakers-title.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o title a6-02-mapmakers-title.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fetitle.exe a6-02-mapmakers-title.cpp
 
 #include <algorithm>
 #include <iostream>

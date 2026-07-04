@@ -26,7 +26,8 @@
 //   the borders (the zero border row/column absorbs the index arithmetic);
 //   all-zero yields.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o vineyard t02-s2-1-vineyard-terraces.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o vineyard t02-s2-1-vineyard-terraces.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fevineyard.exe t02-s2-1-vineyard-terraces.cpp
 
 #include <iostream>
 #include <print>

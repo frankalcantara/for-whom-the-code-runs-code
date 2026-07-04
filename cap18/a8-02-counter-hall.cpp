@@ -15,7 +15,8 @@
 //   is unnecessary for one shared counter.
 // EDGE CASES: p>n; all values active; no value active.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -pthread -o counter a8-02-counter-hall.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -pthread -o counter a8-02-counter-hall.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fecounter.exe a8-02-counter-hall.cpp
 
 #include <algorithm>
 #include <atomic>

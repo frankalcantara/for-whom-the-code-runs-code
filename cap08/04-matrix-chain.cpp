@@ -1,7 +1,8 @@
 // cap08/04-matrix-chain.cpp
 // Matrix Chain Multiplication and interval DP.
 // Palindrome Partitioning: minimum cuts for a palindrome partition.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o matrix_chain 04-matrix-chain.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o matrix_chain 04-matrix-chain.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fematrix_chain.exe 04-matrix-chain.cpp
 
 #include <cassert>
 #include <algorithm>

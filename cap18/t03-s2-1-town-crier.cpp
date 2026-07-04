@@ -29,7 +29,8 @@
 //   a single word; all words the same length (the first wins); a word
 //   spanning the whole line.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o crier t03-s2-1-town-crier.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o crier t03-s2-1-town-crier.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fecrier.exe t03-s2-1-town-crier.cpp
 
 #include <iostream>
 #include <print>

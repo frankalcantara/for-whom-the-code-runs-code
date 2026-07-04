@@ -2,7 +2,8 @@
 // Microbenchmark: copy vs move vs emplace when filling a vector.
 // For a heap-owning element type, move and emplace avoid per-element copies;
 // for a trivial element type the choice does not matter (a move copies bits).
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o move-emplace 17-move-emplace.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o move-emplace 17-move-emplace.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Femove-emplace.exe 17-move-emplace.cpp
 
 #include <chrono>
 #include <print>

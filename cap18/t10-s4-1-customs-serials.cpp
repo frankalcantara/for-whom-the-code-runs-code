@@ -41,7 +41,8 @@
 //   power (one); the primorial 9699690 and friends (eight); repeated
 //   serials (no caching needed at 23 divisions each).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o serials t10-s4-1-customs-serials.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o serials t10-s4-1-customs-serials.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feserials.exe t10-s4-1-customs-serials.cpp
 
 #include <cstdio>
 #include <string>

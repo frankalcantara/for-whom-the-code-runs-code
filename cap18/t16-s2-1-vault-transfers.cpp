@@ -25,7 +25,8 @@
 // EDGE CASES: m = 0; p > m; negative initial balances; transfers
 //   in both directions between the same pair.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -pthread -o transfers t16-s2-1-vault-transfers.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -pthread -o transfers t16-s2-1-vault-transfers.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fetransfers.exe t16-s2-1-vault-transfers.cpp
 
 #include <algorithm>
 #include <cstdint>

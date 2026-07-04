@@ -1,6 +1,7 @@
 // cap06/03-heap.cpp
 // std::priority_queue -- max-heap, min-heap, and custom heap entries.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o heap 03-heap.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o heap 03-heap.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feheap.exe 03-heap.cpp
 
 #include <algorithm>
 #include <cassert>

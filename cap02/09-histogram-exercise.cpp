@@ -9,7 +9,8 @@
 // Input:  line 1 = n; line 2 = n integers
 // Output: mode and frequency, singleton count, list of (value, frequency)
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o histogram 09-histogram-exercise.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o histogram 09-histogram-exercise.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fehistogram.exe 09-histogram-exercise.cpp
 
 #include <algorithm>
 #include <array>

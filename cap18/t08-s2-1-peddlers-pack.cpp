@@ -33,7 +33,8 @@
 //   wares together within W (take all); n = 1; equal weights with
 //   distinct profits (the dp must prefer the profit, not the order).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o pack t08-s2-1-peddlers-pack.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o pack t08-s2-1-peddlers-pack.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fepack.exe t08-s2-1-peddlers-pack.cpp
 
 #include <algorithm>
 #include <iostream>

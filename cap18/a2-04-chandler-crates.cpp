@@ -33,7 +33,8 @@
 // EDGE CASES: budget 0 (zero crates); budget below the cheapest crate;
 //   budget covering everything; equal prices; q repeating one budget.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o chandler a2-04-chandler-crates.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o chandler a2-04-chandler-crates.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fechandler.exe a2-04-chandler-crates.cpp
 
 #include <algorithm>
 #include <iostream>

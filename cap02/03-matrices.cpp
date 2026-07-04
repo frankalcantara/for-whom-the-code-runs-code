@@ -1,6 +1,7 @@
 // cap02/03-matrices.cpp
 // 2D matrices using vector<vector<int>>
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o matrices 03-matrices.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o matrices 03-matrices.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fematrices.exe 03-matrices.cpp
 
 #include <algorithm>
 #include <iostream>

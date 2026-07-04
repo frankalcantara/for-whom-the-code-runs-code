@@ -28,7 +28,8 @@
 //   pilgrim exactly on a stone (distance 0); n = 1 (one candidate only);
 //   equidistant neighbors (either answer is the same distance).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o stones t04-s1-1-mile-stones.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o stones t04-s1-1-mile-stones.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Festones.exe t04-s1-1-mile-stones.cpp
 
 #include <algorithm>
 #include <iostream>

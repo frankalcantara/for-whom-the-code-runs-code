@@ -41,7 +41,8 @@
 //   1); the maximum query C(1e6, 5e5) (deep middle of the table);
 //   repeated identical queries (O(1) each makes caching pointless).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o drafts t10-s4-3-garrison-drafts.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o drafts t10-s4-3-garrison-drafts.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fedrafts.exe t10-s4-3-garrison-drafts.cpp
 
 #include <cstdio>
 #include <string>

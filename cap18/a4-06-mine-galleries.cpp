@@ -41,7 +41,8 @@
 //   cross-check C(r+c-2, r-1) mod p); equal-length detours around
 //   multiple pillars (counts multiply per independent choice).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o mine a4-06-mine-galleries.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o mine a4-06-mine-galleries.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Femine.exe a4-06-mine-galleries.cpp
 
 #include <iostream>
 #include <print>

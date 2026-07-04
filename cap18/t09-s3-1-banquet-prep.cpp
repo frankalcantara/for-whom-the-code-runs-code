@@ -36,7 +36,8 @@
 //   self-rule (immediate contradiction); two disjoint chains
 //   (interleaving allowed); the full-cycle input (emits nothing).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o prep t09-s3-1-banquet-prep.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o prep t09-s3-1-banquet-prep.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feprep.exe t09-s3-1-banquet-prep.cpp
 
 #include <cstdio>
 #include <iostream>

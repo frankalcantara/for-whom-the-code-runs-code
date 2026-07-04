@@ -33,7 +33,8 @@
 //   temperatures; strictly increasing temperatures (answer at the
 //   flattest tail); negative temperatures and the 2e9 spread.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o ferment t05-s2-1-fermentation-log.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o ferment t05-s2-1-fermentation-log.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feferment.exe t05-s2-1-fermentation-log.cpp
 
 #include <deque>
 #include <iostream>

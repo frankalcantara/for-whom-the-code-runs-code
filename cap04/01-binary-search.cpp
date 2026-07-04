@@ -1,6 +1,7 @@
 // cap04/01-binary-search.cpp
 // Manual binary search: loop invariant, three canonical forms.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o binary_search 01-binary-search.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o binary_search 01-binary-search.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Febinary_search.exe 01-binary-search.cpp
 // Test:    echo "" | ./binary_search
 
 #include <cassert>

@@ -21,7 +21,8 @@
 // teaching example. Problem description from Phase 2, Week 1 of the
 // competitive programming course (2024).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o max_decline 13-max-decline.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o max_decline 13-max-decline.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Femax_decline.exe 13-max-decline.cpp
 
 #include <algorithm>  // std::max
 #include <cassert>

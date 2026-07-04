@@ -24,7 +24,8 @@
 // EDGE CASES: one interval; nested intervals; touching endpoints;
 //   negative coordinates; already covered intervals.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o pins t15-s4-1-awning-pins.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o pins t15-s4-1-awning-pins.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fepins.exe t15-s4-1-awning-pins.cpp
 
 #include <algorithm>
 #include <cstdint>

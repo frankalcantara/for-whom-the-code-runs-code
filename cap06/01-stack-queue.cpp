@@ -1,6 +1,7 @@
 // cap06/01-stack-queue.cpp
 // Stack, queue, and monotonic deque -- fundamental contest patterns.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o stack_queue 01-stack-queue.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o stack_queue 01-stack-queue.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Festack_queue.exe 01-stack-queue.cpp
 
 #include <algorithm>
 #include <cassert>

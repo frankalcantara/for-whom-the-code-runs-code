@@ -25,7 +25,8 @@
 //   of exactly B mebibytes (fits, no rounding); r = c = 1e9 (the 8e18
 //   maximum); budget far larger than any grid.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o atlas t01-s3-2-star-atlas.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o atlas t01-s3-2-star-atlas.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Featlas.exe t01-s3-2-star-atlas.cpp
 
 #include <cstdint>
 #include <iostream>

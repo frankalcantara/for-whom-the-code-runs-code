@@ -13,7 +13,8 @@
 // ALTERNATIVES: explicit simulation is slower and more complex.
 // EDGE CASES: n=1; k=1; k>n.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o rotation a8-01-council-rotation.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o rotation a8-01-council-rotation.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Ferotation.exe a8-01-council-rotation.cpp
 
 #include <cstdint>
 #include <iostream>

@@ -32,7 +32,8 @@
 //   example: a, aa, aaa); the empty substring excluded by the
 //   "non-empty" in the contract; n = 1e5 overflow drill.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o band t12-s4-2-engravers-band.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o band t12-s4-2-engravers-band.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feband.exe t12-s4-2-engravers-band.cpp
 
 #include <algorithm>
 #include <iostream>

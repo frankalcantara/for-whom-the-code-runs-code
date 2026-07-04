@@ -1,6 +1,7 @@
 // cap13/03-closest-pair.cpp
 // Solved exercise: closest pair of points in O(n log n).
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o closest 03-closest-pair.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o closest 03-closest-pair.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feclosest.exe 03-closest-pair.cpp
 
 #include <algorithm>
 #include <cassert>

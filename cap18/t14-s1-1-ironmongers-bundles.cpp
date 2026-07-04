@@ -36,7 +36,8 @@
 //   m = 50 with disjoint singletons (answer 20, the slow diagonal
 //   of the DP).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o bundles t14-s1-1-ironmongers-bundles.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o bundles t14-s1-1-ironmongers-bundles.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Febundles.exe t14-s1-1-ironmongers-bundles.cpp
 
 #include <cstdint>
 #include <iostream>

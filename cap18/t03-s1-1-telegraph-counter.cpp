@@ -24,7 +24,8 @@
 //   (not a rise, comparison is strict); negative strengths; alternating
 //   rise and fall.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o telegraph t03-s1-1-telegraph-counter.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o telegraph t03-s1-1-telegraph-counter.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fetelegraph.exe t03-s1-1-telegraph-counter.cpp
 
 #include <cstdio>
 #include <print>

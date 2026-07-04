@@ -3,7 +3,8 @@
 // each distinct value a random 64-bit fingerprint and taking prefix sums of
 // those fingerprints. Two segments hold the same multiset iff their fingerprint
 // sums (and lengths) match; a random tag makes a false match a ~2^-64 event.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o shelves 23-apothecary-shelves.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o shelves 23-apothecary-shelves.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feshelves.exe 23-apothecary-shelves.cpp
 
 #include <cstdint>
 #include <iostream>

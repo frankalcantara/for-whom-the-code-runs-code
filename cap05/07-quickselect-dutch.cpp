@@ -1,7 +1,8 @@
 // cap05/07-quickselect-dutch.cpp
 // QuickSelect: k-th element in expected O(n).
 // Dutch National Flag: partitions into 3 groups in O(n).
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o quickselect 07-quickselect-dutch.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o quickselect 07-quickselect-dutch.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fequickselect.exe 07-quickselect-dutch.cpp
 
 #include <algorithm>
 #include <cassert>

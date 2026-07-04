@@ -37,7 +37,8 @@
 //   column with a gap (0) and without (1); the obstacle-free grid
 //   (binomial check).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o tiles a4-02-cloister-tiles.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o tiles a4-02-cloister-tiles.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fetiles.exe a4-02-cloister-tiles.cpp
 
 #include <iostream>
 #include <print>

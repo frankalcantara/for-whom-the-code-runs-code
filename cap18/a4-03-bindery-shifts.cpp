@@ -38,7 +38,8 @@
 //   thicknesses equal; one giant signature dominating every shift;
 //   k > number of signatures cannot happen (k <= n by contract).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o shifts a4-03-bindery-shifts.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o shifts a4-03-bindery-shifts.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feshifts.exe a4-03-bindery-shifts.cpp
 
 #include <algorithm>
 #include <iostream>

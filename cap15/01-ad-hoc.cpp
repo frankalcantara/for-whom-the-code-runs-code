@@ -1,6 +1,7 @@
 // cap15/01-ad-hoc.cpp
 // Classic ad hoc patterns: digit arithmetic, simple big integers, ordering tricks, and Josephus.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o adhoc 01-ad-hoc.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o adhoc 01-ad-hoc.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feadhoc.exe 01-ad-hoc.cpp
 
 #include <algorithm>
 #include <cassert>

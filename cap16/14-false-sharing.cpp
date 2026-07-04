@@ -3,7 +3,8 @@
 // the same cache line, because coherence works at cache-line granularity, not
 // per variable. Padding each counter to its own line removes the contention.
 // The two layouts do identical arithmetic; only their memory spacing differs.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -pthread -o false-sharing 14-false-sharing.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -pthread -o false-sharing 14-false-sharing.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fefalse-sharing.exe 14-false-sharing.cpp
 
 #include <atomic>
 #include <chrono>

@@ -1,6 +1,7 @@
 // cap03/03-fstream-expected.cpp
 // File I/O with std::ifstream and std::expected for error handling (C++23)
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o fstream_exp 03-fstream-expected.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o fstream_exp 03-fstream-expected.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fefstream_exp.exe 03-fstream-expected.cpp
 
 #include <expected>
 #include <fstream>

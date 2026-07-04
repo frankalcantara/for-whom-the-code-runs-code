@@ -1,6 +1,7 @@
 // cap06/07-dsu.cpp
 // Union-Find (Disjoint Set Union) -- path compression + union by rank.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o dsu 07-dsu.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o dsu 07-dsu.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fedsu.exe 07-dsu.cpp
 
 #include <cassert>
 #include <algorithm>

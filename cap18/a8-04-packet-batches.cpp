@@ -16,7 +16,8 @@
 // ALTERNATIVES: DP over cuts is too slow at n=2e5.
 // EDGE CASES: k=1; k=n; one very large packet.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o batches a8-04-packet-batches.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o batches a8-04-packet-batches.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Febatches.exe a8-04-packet-batches.cpp
 
 #include <algorithm>
 #include <cstdint>

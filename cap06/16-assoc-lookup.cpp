@@ -4,7 +4,8 @@
 // std::ranges::binary_search. When the keys are known up front and never
 // change, the contiguous sorted vector is cache-friendly and competitive with,
 // often faster than, the node-based and hashed containers.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o assoc-lookup 16-assoc-lookup.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o assoc-lookup 16-assoc-lookup.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feassoc-lookup.exe 16-assoc-lookup.cpp
 
 #include <algorithm>
 #include <chrono>

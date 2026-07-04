@@ -6,7 +6,8 @@
 //   Naive: O(2^n) -- enumerates every subset.
 //   MitM:  O(2^(n/2) * n) -- enumerates each half and combines with binary search.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o mitm 04-meet-in-middle.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o mitm 04-meet-in-middle.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Femitm.exe 04-meet-in-middle.cpp
 
 #include <algorithm>
 #include <cassert>

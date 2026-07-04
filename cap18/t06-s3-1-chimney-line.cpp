@@ -31,7 +31,8 @@
 //   (ties are not "taller": answer skips equals); n = 1; the tallest
 //   chimney anywhere (always 0).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o chimney t06-s3-1-chimney-line.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o chimney t06-s3-1-chimney-line.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fechimney.exe t06-s3-1-chimney-line.cpp
 
 #include <iostream>
 #include <print>

@@ -1,6 +1,7 @@
 // cap14/03-independent-set.cpp
 // Solved exercise: maximum independent set for small graphs.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o independent_set 03-independent-set.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o independent_set 03-independent-set.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feindependent_set.exe 03-independent-set.cpp
 
 #include <algorithm>
 #include <cassert>

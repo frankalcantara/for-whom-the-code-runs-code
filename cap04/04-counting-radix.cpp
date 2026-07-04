@@ -1,6 +1,7 @@
 // cap04/04-counting-radix.cpp
 // Counting sort and Radix sort: O(n + k) and O(d * (n + b)) for bounded integers.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o counting_radix 04-counting-radix.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o counting_radix 04-counting-radix.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fecounting_radix.exe 04-counting-radix.cpp
 
 #include <algorithm>
 #include <cassert>

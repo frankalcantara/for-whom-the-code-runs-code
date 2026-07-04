@@ -1,7 +1,8 @@
 // cap03/02-fread-parser.cpp
 // Custom integer parser using fread — fastest stdin reading in contest code
 // Reads all of stdin in one syscall, then parses integers from the buffer.
-// Compile: g++ -O2 -std=c++23 -o fread_parser 02-fread-parser.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o fread_parser 02-fread-parser.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fefread_parser.exe 02-fread-parser.cpp
 // Test:    echo "10 1 2 3 4 5 6 7 8 9 10" | ./fread_parser
 
 #include <cstdio>

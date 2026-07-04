@@ -30,7 +30,8 @@
 //   only petitioner); n = k = 1; both at 1e6 (table size 2e6 - 1,
 //   no overflow in the table build).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o loaves t11-s1-1-almoners-loaves.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o loaves t11-s1-1-almoners-loaves.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feloaves.exe t11-s1-1-almoners-loaves.cpp
 
 #include <iostream>
 #include <print>

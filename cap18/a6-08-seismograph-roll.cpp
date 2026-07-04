@@ -35,7 +35,8 @@
 //   lengths back to back (parser state machine, not column
 //   guessing).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o roll a6-08-seismograph-roll.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o roll a6-08-seismograph-roll.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feroll.exe a6-08-seismograph-roll.cpp
 
 #include <cstdio>
 #include <print>

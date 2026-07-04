@@ -29,7 +29,8 @@
 //   counter handles it by construction); no match anywhere (0);
 //   alternating overlap chains (the example).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o tray t12-s3-1-typesetters-tray.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o tray t12-s3-1-typesetters-tray.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fetray.exe t12-s3-1-typesetters-tray.cpp
 
 #include <array>
 #include <iostream>

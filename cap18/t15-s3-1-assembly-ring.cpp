@@ -22,7 +22,8 @@
 //   state the statement is hiding.
 // EDGE CASES: n = 1; k = 1; k > n; the classic n = 7, k = 2.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o ring t15-s3-1-assembly-ring.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o ring t15-s3-1-assembly-ring.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fering.exe t15-s3-1-assembly-ring.cpp
 
 #include <cstdint>
 #include <iostream>

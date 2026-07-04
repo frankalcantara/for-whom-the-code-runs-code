@@ -41,7 +41,8 @@
 //   parallel channels; a long path (n circles - and the explicit
 //   stack's reason to exist).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o gossip t09-s4-2-gossip-circuit.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o gossip t09-s4-2-gossip-circuit.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fegossip.exe t09-s4-2-gossip-circuit.cpp
 
 #include <iostream>
 #include <print>

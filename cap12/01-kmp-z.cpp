@@ -1,6 +1,7 @@
 // cap12/01-kmp-z.cpp
 // KMP (Knuth-Morris-Pratt) and Z-function for pattern matching in O(n + m).
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o kmp_z 01-kmp-z.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o kmp_z 01-kmp-z.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fekmp_z.exe 01-kmp-z.cpp
 
 #include <algorithm>
 #include <cassert>

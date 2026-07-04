@@ -1,6 +1,7 @@
 // cap10/03-combinatorics-mod.cpp
 // Factorials, combinations, and binomial coefficients modulo a prime.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o comb_mod 03-combinatorics-mod.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o comb_mod 03-combinatorics-mod.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fecomb_mod.exe 03-combinatorics-mod.cpp
 
 #include <cassert>
 #include <print>

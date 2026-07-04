@@ -22,7 +22,8 @@
 // EDGE CASES: n = 0; negative d; negative a; large n with large
 //   values.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o metronome t16-s4-3-sequence-metronome.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o metronome t16-s4-3-sequence-metronome.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Femetronome.exe t16-s4-3-sequence-metronome.cpp
 
 #include <coroutine>
 #include <cstdint>

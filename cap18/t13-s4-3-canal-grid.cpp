@@ -42,7 +42,8 @@
 //   height crossed by one vertical (n - 1 in one query); negative
 //   coordinates throughout (compression is sign-blind).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o canals t13-s4-3-canal-grid.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o canals t13-s4-3-canal-grid.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fecanals.exe t13-s4-3-canal-grid.cpp
 
 #include <algorithm>
 #include <cstdint>

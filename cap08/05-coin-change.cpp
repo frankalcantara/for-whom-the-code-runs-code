@@ -1,6 +1,7 @@
 // cap08/05-coin-change.cpp
 // Coin Change: minimum coins and counting combinations/sequences.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o coin_change 05-coin-change.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o coin_change 05-coin-change.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fecoin_change.exe 05-coin-change.cpp
 
 #include <algorithm>
 #include <cassert>

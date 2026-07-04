@@ -28,7 +28,8 @@
 //   around position k (the order statistic is over the multiset, copies
 //   count); n = 1; tolls of zero.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o toll t04-s3-2-toll-board.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o toll t04-s3-2-toll-board.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fetoll.exe t04-s3-2-toll-board.cpp
 
 #include <algorithm>
 #include <iostream>

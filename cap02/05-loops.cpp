@@ -1,7 +1,6 @@
 // cap02/05-loops.cpp
 // Loop forms in C++23: index-based, range-based, views, parallel
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o loops 05-loops.cpp
-// For parallel: g++ -O2 -std=c++23 -ltbb -o loops 05-loops.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feloops.exe 05-loops.cpp
 
 #include <algorithm>
 #include <execution>

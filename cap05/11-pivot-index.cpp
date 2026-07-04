@@ -14,7 +14,8 @@
 // Source: "O Equilibrista de Pratos" — Frank Alcantara, competitive programming
 // course, Phase 1, Week 2 (2024).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o pivot_index 11-pivot-index.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o pivot_index 11-pivot-index.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fepivot_index.exe 11-pivot-index.cpp
 
 #include <cassert>
 #include <numeric>   // std::accumulate, std::reduce

@@ -30,7 +30,8 @@
 //   (all > W/2); exact fits w[l] + w[r] = W; duplicate weights; the
 //   guarantee w_i <= W removes the infeasible case by contract.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o kayaks a3-01-tandem-kayaks.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o kayaks a3-01-tandem-kayaks.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fekayaks.exe a3-01-tandem-kayaks.cpp
 
 #include <algorithm>
 #include <iostream>

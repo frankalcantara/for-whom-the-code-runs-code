@@ -23,7 +23,8 @@
 // EDGE CASES: k > n (0); k = 0 or k = n (1); n = 0; many repeated
 //   queries; maximum n.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o permits a7-08-permit-numbers.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o permits a7-08-permit-numbers.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fepermits.exe a7-08-permit-numbers.cpp
 
 #include <algorithm>
 #include <iostream>

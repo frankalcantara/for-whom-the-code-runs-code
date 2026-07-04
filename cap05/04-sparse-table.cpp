@@ -1,7 +1,8 @@
 // cap05/04-sparse-table.cpp
 // Sparse Table for static RMQ (Range Minimum Query).
 // Build: O(n log n)   Query: O(1) -- overlap is valid for min/max (idempotent).
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o sparse_table 04-sparse-table.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o sparse_table 04-sparse-table.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fesparse_table.exe 04-sparse-table.cpp
 
 #include <bit>        // std::bit_width (C++20) for floor(log2)
 #include <cassert>

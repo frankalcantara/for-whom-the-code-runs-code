@@ -1,6 +1,6 @@
 // cap16/04-parallel-algorithms.cpp
 // STL execution policies: seq, par, and par_unseq.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -pthread -ltbb -o parallel_algorithms 04-parallel-algorithms.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feparallel_algorithms.exe 04-parallel-algorithms.cpp
 
 #include <cassert>
 #include <execution>

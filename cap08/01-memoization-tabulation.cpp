@@ -1,6 +1,7 @@
 // cap08/01-memoization-tabulation.cpp
 // Memoization (top-down) vs Tabulation (bottom-up) -- Fibonacci and Counting Paths.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o memo_tab 01-memoization-tabulation.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o memo_tab 01-memoization-tabulation.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fememo_tab.exe 01-memoization-tabulation.cpp
 
 #include <cassert>
 #include <print>

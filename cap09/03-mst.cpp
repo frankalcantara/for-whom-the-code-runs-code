@@ -1,6 +1,7 @@
 // cap09/03-mst.cpp
 // Minimum Spanning Tree: Kruskal (DSU) and Prim (heap).
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o mst 03-mst.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o mst 03-mst.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Femst.exe 03-mst.cpp
 
 #include <cassert>
 #include <algorithm>

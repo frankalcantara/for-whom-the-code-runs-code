@@ -45,7 +45,8 @@
 //   cycle on the route (unbounded); parallel roads with different
 //   costs; m = 0.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o subsidies a5-01-crown-subsidies.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o subsidies a5-01-crown-subsidies.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fesubsidies.exe a5-01-crown-subsidies.cpp
 
 #include <cstdint>
 #include <iostream>

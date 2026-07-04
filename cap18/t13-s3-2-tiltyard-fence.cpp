@@ -40,7 +40,8 @@
 //   reverses); clockwise input (symmetric); double-wound input
 //   (rejected by check 3); n = 3.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o tiltyard t13-s3-2-tiltyard-fence.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o tiltyard t13-s3-2-tiltyard-fence.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fetiltyard.exe t13-s3-2-tiltyard-fence.cpp
 
 #include <iostream>
 #include <print>

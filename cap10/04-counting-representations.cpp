@@ -14,7 +14,8 @@
 // x1 + x2 + ... + xk = n with xi >= 0, where the k boxes are labeled.
 // The answer is C(n + k - 1, k - 1).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o counting 04-counting-representations.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o counting 04-counting-representations.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fecounting.exe 04-counting-representations.cpp
 
 #include <algorithm>
 #include <cassert>

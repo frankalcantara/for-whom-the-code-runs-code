@@ -28,7 +28,8 @@
 // EDGE CASES: `0000` and `+0` and `-0` (all zero); a bare unsigned token;
 //   the maximum 18-digit magnitude; a sum that cancels to zero.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o adding t03-s3-1-adding-machine.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o adding t03-s3-1-adding-machine.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feadding.exe t03-s3-1-adding-machine.cpp
 
 #include <iostream>
 #include <print>

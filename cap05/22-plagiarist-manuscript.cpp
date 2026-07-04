@@ -2,7 +2,7 @@
 // Longest substring that occurs at least twice (overlaps allowed),
 // solved by binary search on the length plus prefix hashing with a base
 // drawn at random so no adversarial input can target a fixed constant.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o plagiarist 22-plagiarist-manuscript.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o plagiarist 22-plagiarist-manuscript.cpp
 
 #include <cstdint>
 #include <iostream>

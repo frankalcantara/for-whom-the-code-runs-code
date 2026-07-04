@@ -25,7 +25,8 @@
 //   than all of the other (the merge degenerates into two appends);
 //   n = m = 1.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o ferries t01-s4-2-two-ferries.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o ferries t01-s4-2-two-ferries.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feferries.exe t01-s4-2-two-ferries.cpp
 
 #include <iostream>
 #include <print>

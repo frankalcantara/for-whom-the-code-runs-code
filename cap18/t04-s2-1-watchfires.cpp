@@ -33,7 +33,8 @@
 //   feasible only when k does not exceed distinct positions... d = 0 is
 //   always feasible and the search floor); already-sorted input.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o watchfires t04-s2-1-watchfires.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o watchfires t04-s2-1-watchfires.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fewatchfires.exe t04-s2-1-watchfires.cpp
 
 #include <algorithm>
 #include <iostream>

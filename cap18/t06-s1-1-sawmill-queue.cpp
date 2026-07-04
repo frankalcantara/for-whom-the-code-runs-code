@@ -31,7 +31,8 @@
 //   alternating arrive/cut down to an empty yard; all arrivals first,
 //   all cuts after (heap drains in sorted order).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o sawmill t06-s1-1-sawmill-queue.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o sawmill t06-s1-1-sawmill-queue.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fesawmill.exe t06-s1-1-sawmill-queue.cpp
 
 #include <iostream>
 #include <print>

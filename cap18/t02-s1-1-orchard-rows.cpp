@@ -20,7 +20,8 @@
 // EDGE CASES: l == r (single tree); the full range 1..n; zero-crate trees;
 //   q queries repeating the same range.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o orchard t02-s1-1-orchard-rows.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o orchard t02-s1-1-orchard-rows.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feorchard.exe t02-s1-1-orchard-rows.cpp
 
 #include <iostream>
 #include <print>

@@ -28,7 +28,8 @@
 //   disjoint collinear segments; vertical and horizontal segments;
 //   reversed endpoints.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o ribbons a7-01-survey-ribbons.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o ribbons a7-01-survey-ribbons.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feribbons.exe a7-01-survey-ribbons.cpp
 
 #include <algorithm>
 #include <cstdint>

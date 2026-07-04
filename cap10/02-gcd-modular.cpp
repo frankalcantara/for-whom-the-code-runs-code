@@ -1,6 +1,7 @@
 // cap10/02-gcd-modular.cpp
 // GCD, LCM, modular arithmetic, fast exponentiation, modular inverse, CRT.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o gcd_mod 02-gcd-modular.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o gcd_mod 02-gcd-modular.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fegcd_mod.exe 02-gcd-modular.cpp
 
 #include <cassert>
 #include <print>

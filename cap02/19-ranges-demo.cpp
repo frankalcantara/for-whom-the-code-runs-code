@@ -2,8 +2,9 @@
 // Ranges in idiomatic C++23. The pipeline materializes with std::ranges::to;
 // std::views::enumerate and std::views::zip replace manual index loops. The
 // portable fallback for each is noted in a comment. Requires a C++23 ranges
-// implementation (libc++ or a recent libstdc++); GCC 11 lacks to/enumerate/zip.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o ranges-demo 19-ranges-demo.cpp
+// implementation; older standard libraries may lack to/enumerate/zip.
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o ranges-demo 19-ranges-demo.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feranges-demo.exe 19-ranges-demo.cpp
 
 #include <cassert>
 #include <print>

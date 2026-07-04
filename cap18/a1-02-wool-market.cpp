@@ -30,7 +30,8 @@
 //   (answer n); w equal to a repeated weight (all copies count, which is
 //   why upper_bound, not lower_bound); n = 1.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o wool a1-02-wool-market.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o wool a1-02-wool-market.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fewool.exe a1-02-wool-market.cpp
 
 #include <algorithm>
 #include <iostream>

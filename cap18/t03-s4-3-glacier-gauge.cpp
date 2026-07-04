@@ -34,7 +34,8 @@
 //   T negative and divisible (it must not fire); T = 0; n = 1 (r is
 //   always 0); all readings equal.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o glacier t03-s4-3-glacier-gauge.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o glacier t03-s4-3-glacier-gauge.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feglacier.exe t03-s4-3-glacier-gauge.cpp
 
 #include <iostream>
 #include <print>

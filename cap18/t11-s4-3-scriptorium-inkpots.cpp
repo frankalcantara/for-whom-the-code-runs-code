@@ -41,7 +41,8 @@
 //   j(c+1) overflow drill at c = 1e9; alternating sum kept
 //   non-negative with a final ((s % p) + p) % p.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o inkpots t11-s4-3-scriptorium-inkpots.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o inkpots t11-s4-3-scriptorium-inkpots.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feinkpots.exe t11-s4-3-scriptorium-inkpots.cpp
 
 #include <cstddef>
 #include <iostream>

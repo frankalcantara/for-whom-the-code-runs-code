@@ -25,7 +25,8 @@
 //   one diagonal per cell); all yields zero (answer is diagonal 0); ties
 //   between diagonals (smallest index wins); maximum-size grid.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o lagoon t02-s4-2-salt-lagoon.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o lagoon t02-s4-2-salt-lagoon.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Felagoon.exe t02-s4-2-salt-lagoon.cpp
 
 #include <iostream>
 #include <print>

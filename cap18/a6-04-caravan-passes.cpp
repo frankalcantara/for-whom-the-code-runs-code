@@ -32,7 +32,8 @@
 //   loops (never improve, harmless); m = 0 (-1 for n > 1); the
 //   2e14 distance ceiling exercised by a path graph at the limits.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o caravan a6-04-caravan-passes.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o caravan a6-04-caravan-passes.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fecaravan.exe a6-04-caravan-passes.cpp
 
 #include <iostream>
 #include <print>

@@ -32,7 +32,8 @@
 //   overflow witness); all equal seniorities (0, ties excluded); n = 1;
 //   two elements both orders.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o parade a3-05-parade-disorder.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o parade a3-05-parade-disorder.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feparade.exe a3-05-parade-disorder.cpp
 
 #include <algorithm>
 #include <iostream>

@@ -1,6 +1,7 @@
 // cap02/06-algorithms.cpp
 // Standard library algorithms: the 15 you reach for in 90% of problems
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o algorithms 06-algorithms.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o algorithms 06-algorithms.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fealgorithms.exe 06-algorithms.cpp
 
 #include <algorithm>
 #include <numeric>

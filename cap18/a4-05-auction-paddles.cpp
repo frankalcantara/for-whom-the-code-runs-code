@@ -42,7 +42,8 @@
 //   insert/erase of the same value; the example's withdrawal changing
 //   the answer to the same query.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o paddles a4-05-auction-paddles.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o paddles a4-05-auction-paddles.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fepaddles.exe a4-05-auction-paddles.cpp
 
 #include <algorithm>
 #include <bit>

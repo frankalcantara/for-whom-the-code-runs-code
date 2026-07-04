@@ -34,7 +34,8 @@
 //   edge (NO); a star (one center is enough); a matching of k + 1
 //   edges (NO by the lower bound); n = 1 with no self-loops.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o belts t14-s4-2-pressroom-belts.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o belts t14-s4-2-pressroom-belts.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Febelts.exe t14-s4-2-pressroom-belts.cpp
 
 #include <cstdint>
 #include <iostream>

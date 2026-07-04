@@ -38,7 +38,8 @@
 //   loop, hence <=, not <); powers of two; n = 999999999989 (largest
 //   prime below 1e12, the slow path).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o blocks t10-s3-2-schoolmasters-blocks.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o blocks t10-s3-2-schoolmasters-blocks.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feblocks.exe t10-s3-2-schoolmasters-blocks.cpp
 
 #include <iostream>
 #include <print>

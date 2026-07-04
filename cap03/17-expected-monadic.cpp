@@ -2,8 +2,9 @@
 // Composing fallible steps with std::expected in idiomatic C++23: the monadic
 // pipeline and_then / transform, with value_or for a default. The portable
 // early-return staircase is kept in a comment as the fallback for standard
-// libraries without the monadic methods (GCC lacks them before 13).
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o expected-monadic 17-expected-monadic.cpp
+// libraries without the monadic methods.
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o expected-monadic 17-expected-monadic.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feexpected-monadic.exe 17-expected-monadic.cpp
 
 #include <cassert>
 #include <expected>

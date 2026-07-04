@@ -41,7 +41,8 @@
 //   single list (the recurrence never assumed distinctness); answer
 //   achieved by two different subsequences, as in the example.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o witnesses a5-04-harbor-witnesses.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o witnesses a5-04-harbor-witnesses.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fewitnesses.exe a5-04-harbor-witnesses.cpp
 
 #include <algorithm>
 #include <iostream>

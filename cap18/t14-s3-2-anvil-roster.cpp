@@ -39,7 +39,8 @@
 //   (parallel edges change nothing); the star (one apprentice,
 //   many anvils - answer 1).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o roster t14-s3-2-anvil-roster.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o roster t14-s3-2-anvil-roster.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feroster.exe t14-s3-2-anvil-roster.cpp
 
 #include <algorithm>
 #include <cstdint>

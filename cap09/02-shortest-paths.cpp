@@ -1,6 +1,7 @@
 // cap09/02-shortest-paths.cpp
 // Dijkstra, Bellman-Ford, and Floyd-Warshall.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o shortest 02-shortest-paths.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o shortest 02-shortest-paths.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feshortest.exe 02-shortest-paths.cpp
 
 #include <cassert>
 #include <algorithm>

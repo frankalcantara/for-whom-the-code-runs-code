@@ -4,7 +4,8 @@
 // of every record. SoA wins the single-field sweep because the wanted values
 // are contiguous; AoS is competitive when whole records are used, because a
 // record's fields share a cache line.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o soa-aos 18-soa-aos.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o soa-aos 18-soa-aos.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fesoa-aos.exe 18-soa-aos.cpp
 
 #include <chrono>
 #include <cstdint>

@@ -48,7 +48,8 @@
 //   star-shaped (all LCAs at the hub); maximum depths with maximum
 //   weights (the 2e14 drill).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o outposts t09-s4-3-ranger-outposts.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o outposts t09-s4-3-ranger-outposts.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feoutposts.exe t09-s4-3-ranger-outposts.cpp
 
 #include <cstdio>
 #include <iostream>

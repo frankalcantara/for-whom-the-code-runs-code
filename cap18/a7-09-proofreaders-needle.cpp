@@ -26,7 +26,8 @@
 // EDGE CASES: pattern length 1; pattern equal to text; overlapping
 //   occurrences such as ana in bananana; no occurrence.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o needle a7-09-proofreaders-needle.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o needle a7-09-proofreaders-needle.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feneedle.exe a7-09-proofreaders-needle.cpp
 
 #include <iostream>
 #include <print>

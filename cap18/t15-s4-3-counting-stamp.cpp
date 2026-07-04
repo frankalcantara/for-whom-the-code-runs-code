@@ -23,7 +23,8 @@
 // EDGE CASES: z = 0 (answer 0); z at a jump such as 6 -> 25; large
 //   z near 1e18.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o stamp t15-s4-3-counting-stamp.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o stamp t15-s4-3-counting-stamp.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Festamp.exe t15-s4-3-counting-stamp.cpp
 
 #include <cstdint>
 #include <iostream>

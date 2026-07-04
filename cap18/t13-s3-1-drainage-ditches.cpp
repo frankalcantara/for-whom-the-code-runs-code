@@ -39,7 +39,8 @@
 //   (equal or distinct points); T-shaped touch mid-segment (YES);
 //   full-range coordinates exercising the 8e18 cross.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o ditches t13-s3-1-drainage-ditches.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o ditches t13-s3-1-drainage-ditches.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feditches.exe t13-s3-1-drainage-ditches.cpp
 
 #include <algorithm>
 #include <iostream>

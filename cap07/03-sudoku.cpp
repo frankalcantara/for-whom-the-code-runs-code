@@ -3,7 +3,8 @@
 // Technique: for each empty cell, try digits 1-9;
 // constraint propagation removes impossible candidates with bitmasks.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o sudoku 03-sudoku.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o sudoku 03-sudoku.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fesudoku.exe 03-sudoku.cpp
 
 #include <cassert>
 #include <array>

@@ -29,7 +29,8 @@
 //   contract (l = r); all contracts on one segment (maximum accumulation,
 //   the overflow case); n = 1, m = 1.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o dredge t05-s1-1-dredging-crews.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o dredge t05-s1-1-dredging-crews.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fedredge.exe t05-s1-1-dredging-crews.cpp
 
 #include <iostream>
 #include <print>

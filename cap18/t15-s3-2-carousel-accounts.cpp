@@ -23,7 +23,8 @@
 // EDGE CASES: all negative values; n = 1; best arc wraps; best arc
 //   does not wrap; zeros mixed with negatives.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o carousel t15-s3-2-carousel-accounts.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o carousel t15-s3-2-carousel-accounts.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fecarousel.exe t15-s3-2-carousel-accounts.cpp
 
 #include <algorithm>
 #include <cstdint>

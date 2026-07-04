@@ -1,6 +1,7 @@
 // cap13/01-vectors-cross.cpp
 // Points, 2D vectors, cross product, polygon area, and orientation.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o vectors 01-vectors-cross.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o vectors 01-vectors-cross.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fevectors.exe 01-vectors-cross.cpp
 
 #include <algorithm>
 #include <cassert>

@@ -12,7 +12,8 @@
 //   Layer 2: std::cin/cout with sync disabled              O(n), smaller constant
 //   Layer 3: fread plus manual parser                      O(n), minimal overhead
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o sequence_stats 05-sequence-statistics.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o sequence_stats 05-sequence-statistics.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fesequence_stats.exe 05-sequence-statistics.cpp
 // Bench:   python3 -c "import random; n=1000000; print(n); print(' '.join(str(random.randint(-10**6,10**6)) for _ in range(n)))" > /tmp/big.txt
 //          time ./sequence_stats layer1 < /tmp/big.txt
 //          time ./sequence_stats layer2 < /tmp/big.txt

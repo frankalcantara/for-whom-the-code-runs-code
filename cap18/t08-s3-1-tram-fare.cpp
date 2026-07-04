@@ -35,7 +35,8 @@
 //   (ignored by the d <= a guard); duplicate denominations (harmless);
 //   f = 1 with and without a 1-coin.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o fare t08-s3-1-tram-fare.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o fare t08-s3-1-tram-fare.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fefare.exe t08-s3-1-tram-fare.cpp
 
 #include <algorithm>
 #include <iostream>

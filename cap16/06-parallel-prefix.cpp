@@ -1,6 +1,7 @@
 // cap16/06-parallel-prefix.cpp
 // Solved exercise: parallel prefix sum over values generated lazily.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -pthread -o parallel_prefix 06-parallel-prefix.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -pthread -o parallel_prefix 06-parallel-prefix.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feparallel_prefix.exe 06-parallel-prefix.cpp
 
 #include <algorithm>
 #include <cassert>

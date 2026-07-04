@@ -51,7 +51,8 @@
 //   pattern a suffix of another (both must count when the longer
 //   one matches); duplicate list entries; single-letter patterns.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o censor t12-s4-3-censors-list.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o censor t12-s4-3-censors-list.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fecensor.exe t12-s4-3-censors-list.cpp
 
 #include <array>
 #include <cstdint>

@@ -14,7 +14,8 @@
 //         lines 3..q+2 = l r
 // Output: for each query: sum min
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o queries 10-query-exercise.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o queries 10-query-exercise.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fequeries.exe 10-query-exercise.cpp
 // Test:    printf "8 4\n3 2 1 5 4 6 7 2\n0 7\n2 5\n3 3\n1 6\n" | ./queries
 
 #include <cassert>

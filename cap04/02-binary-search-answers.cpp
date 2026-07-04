@@ -3,7 +3,8 @@
 // Classic problem: k workers must process n tasks with times t[i].
 // Each worker receives consecutive tasks. Minimize the maximum worker time.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o bsearch_ans 02-binary-search-answers.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o bsearch_ans 02-binary-search-answers.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Febsearch_ans.exe 02-binary-search-answers.cpp
 // Test:    echo "6 3 1 2 3 4 5 6" | ./bsearch_ans   expected: 7
 
 #include <algorithm>

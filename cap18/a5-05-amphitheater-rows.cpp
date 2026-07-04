@@ -45,7 +45,8 @@
 //   B = 1e18 (the width ceiling); B one below and one above a large
 //   triangular number.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o rows a5-05-amphitheater-rows.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o rows a5-05-amphitheater-rows.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Ferows.exe a5-05-amphitheater-rows.cpp
 
 #include <cmath>
 #include <cstdint>

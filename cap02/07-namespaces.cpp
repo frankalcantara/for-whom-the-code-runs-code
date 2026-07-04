@@ -5,7 +5,8 @@
 //   - Scoped using declarations
 //   - A project namespace for a contest library (dsu)
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o namespaces 07-namespaces.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o namespaces 07-namespaces.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fenamespaces.exe 07-namespaces.cpp
 
 #include <algorithm>
 #include <numeric>

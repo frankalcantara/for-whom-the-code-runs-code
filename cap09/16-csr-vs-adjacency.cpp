@@ -5,7 +5,8 @@
 // array, with an offset table that says where each vertex's list begins. CSR
 // builds with a counting pass (degrees, prefix sums) and traverses contiguous
 // memory. The benchmark sweeps every edge of both and times it.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o csr 16-csr-vs-adjacency.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o csr 16-csr-vs-adjacency.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fecsr.exe 16-csr-vs-adjacency.cpp
 
 #include <chrono>
 #include <cstdint>

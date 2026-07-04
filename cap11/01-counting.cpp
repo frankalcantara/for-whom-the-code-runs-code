@@ -1,6 +1,7 @@
 // cap11/01-counting.cpp
 // Permutations, combinations, inclusion-exclusion, Catalan numbers, and Stirling numbers.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o counting 01-counting.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o counting 01-counting.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fecounting.exe 01-counting.cpp
 
 #include <cassert>
 #include <numeric>

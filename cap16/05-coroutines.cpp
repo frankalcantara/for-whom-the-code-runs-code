@@ -1,6 +1,7 @@
 // cap16/05-coroutines.cpp
 // A small coroutine generator for lazy sequences.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o coroutines 05-coroutines.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o coroutines 05-coroutines.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fecoroutines.exe 05-coroutines.cpp
 
 #include <cassert>
 #include <coroutine>

@@ -36,7 +36,8 @@
 //   drill); a strictly increasing staircase (n(n-1)/2, every
 //   pair).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o scouts t13-s4-1-scouts-reckoning.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o scouts t13-s4-1-scouts-reckoning.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fescouts.exe t13-s4-1-scouts-reckoning.cpp
 
 #include <algorithm>
 #include <cstdint>

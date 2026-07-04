@@ -32,7 +32,8 @@
 // EDGE CASES: H large enough that r = 1 works; H = n (rate must be
 //   max h_i); a single heap; heaps of size 1; the overflow-bait ceiling.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o windmill a2-02-windmill-quota.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o windmill a2-02-windmill-quota.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fewindmill.exe a2-02-windmill-quota.cpp
 
 #include <algorithm>
 #include <iostream>

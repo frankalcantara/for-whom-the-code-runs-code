@@ -4,7 +4,8 @@
 // sorted data (a predictable branch), and as an explicit branchless variant.
 // Note: at -O2 the compiler may already turn the branch into a conditional
 // move; when it cannot, the sorted/unsorted gap is the cost of misprediction.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o branchless 05-branchless.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o branchless 05-branchless.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Febranchless.exe 05-branchless.cpp
 
 #include <algorithm>
 #include <chrono>

@@ -1,6 +1,7 @@
 // cap14/01-tsp-bitmask.cpp
 // Exact exponential algorithms for small instances: TSP, vertex cover, and k-coloring.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o tsp 01-tsp-bitmask.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o tsp 01-tsp-bitmask.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fetsp.exe 01-tsp-bitmask.cpp
 
 #include <algorithm>
 #include <cassert>

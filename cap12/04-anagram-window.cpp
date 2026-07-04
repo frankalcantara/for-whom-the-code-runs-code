@@ -1,6 +1,7 @@
 // cap12/04-anagram-window.cpp
 // Solved exercise: anagram counting and minimum covering window.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o anagram_window 04-anagram-window.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o anagram_window 04-anagram-window.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feanagram_window.exe 04-anagram-window.cpp
 
 #include <array>
 #include <cassert>

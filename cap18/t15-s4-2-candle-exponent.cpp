@@ -24,7 +24,8 @@
 // EDGE CASES: b = 0 (a^0 = 1); a = 1; carry producing multiple new
 //   digits; large b.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o candle t15-s4-2-candle-exponent.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o candle t15-s4-2-candle-exponent.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fecandle.exe t15-s4-2-candle-exponent.cpp
 
 #include <iostream>
 #include <numeric>

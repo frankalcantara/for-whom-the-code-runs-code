@@ -31,7 +31,8 @@
 // EDGE CASES: n = 1 (that coin is a majority); exactly half (NONE, the
 //   test is strict); majority by one coin; all coins identical.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o usurper t01-s4-3-usurper-coin.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o usurper t01-s4-3-usurper-coin.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feusurper.exe t01-s4-3-usurper-coin.cpp
 
 #include <iostream>
 #include <print>

@@ -29,7 +29,8 @@
 // EDGE CASES: full ties (identical falcons); all speeds equal (year
 //   decides); all speeds and years equal (alphabetical roster); n = 1.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o falconry t02-s4-1-falconry-roster.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o falconry t02-s4-1-falconry-roster.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fefalconry.exe t02-s4-1-falconry-roster.cpp
 
 #include <algorithm>
 #include <iostream>

@@ -1,6 +1,7 @@
 // cap11/02-counting-dp.cpp
 // Counting with dynamic programming: subset sums, grid paths, and constrained binary strings.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o counting_dp 02-counting-dp.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o counting_dp 02-counting-dp.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fecounting_dp.exe 02-counting-dp.cpp
 
 #include <array>
 #include <cassert>

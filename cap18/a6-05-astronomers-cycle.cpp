@@ -40,7 +40,8 @@
 //   with b^c mod (p-1) = 1 (answer a mod p); a = b = c = 1 (1);
 //   all three at 1e18.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o cycle a6-05-astronomers-cycle.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o cycle a6-05-astronomers-cycle.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fecycle.exe a6-05-astronomers-cycle.cpp
 
 #include <iostream>
 #include <print>

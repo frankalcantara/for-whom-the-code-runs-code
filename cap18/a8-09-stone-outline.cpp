@@ -16,7 +16,8 @@
 // EDGE CASES: clockwise order; counterclockwise order; axis-aligned
 //   rectangles; negative coordinates.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o outline a8-09-stone-outline.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o outline a8-09-stone-outline.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feoutline.exe a8-09-stone-outline.cpp
 
 #include <cstdint>
 #include <cstdlib>

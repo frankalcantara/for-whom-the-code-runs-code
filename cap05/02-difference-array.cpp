@@ -1,6 +1,7 @@
 // cap05/02-difference-array.cpp
 // Difference array -- range updates in O(1), reconstruction in O(n).
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o diff_array 02-difference-array.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o diff_array 02-difference-array.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fediff_array.exe 02-difference-array.cpp
 
 #include <cassert>
 #include <numeric>

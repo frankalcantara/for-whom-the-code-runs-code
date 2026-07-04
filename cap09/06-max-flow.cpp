@@ -5,7 +5,8 @@
 // Dinic's algorithm complexity: O(V^2 * E)
 // For unit-capacity graphs (e.g., bipartite matching): O(E * sqrt(V))
 //
-// Compile: g++ -std=c++23 -O2 -o max-flow 06-max-flow.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o max-flow 06-max-flow.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Femax-flow.exe 06-max-flow.cpp
 
 #include <algorithm>
 #include <climits>

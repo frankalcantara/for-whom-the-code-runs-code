@@ -1,6 +1,7 @@
 // cap02/04-span.cpp
 // std::span — non-owning views over contiguous memory
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o span 04-span.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o span 04-span.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fespan.exe 04-span.cpp
 
 #include <array>
 #include <print>

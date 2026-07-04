@@ -29,7 +29,8 @@
 //   element); all positive (answer is the whole road); the 1e15 sum at
 //   both signs; zeros mixed with negatives.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o tinker t05-s3-1-tinkers-road.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o tinker t05-s3-1-tinkers-road.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fetinker.exe t05-s3-1-tinkers-road.cpp
 
 #include <algorithm>
 #include <iostream>

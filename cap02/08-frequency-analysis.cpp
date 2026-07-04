@@ -1,6 +1,7 @@
 // cap02/08-frequency-analysis.cpp
 // Complete frequency-analysis example for Chapter 02.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o frequency_analysis 08-frequency-analysis.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o frequency_analysis 08-frequency-analysis.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fefrequency_analysis.exe 08-frequency-analysis.cpp
 
 #include <algorithm>
 #include <print>

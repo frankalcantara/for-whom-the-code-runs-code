@@ -4,7 +4,8 @@
 // undefined behavior and no reinterpret_cast aliasing trap; byteswap reverses
 // byte order, the usual need when binary input arrives big-endian on a
 // little-endian host.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o bitcast 24-bit-cast-byteswap.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o bitcast 24-bit-cast-byteswap.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Febitcast.exe 24-bit-cast-byteswap.cpp
 
 #include <bit>
 #include <cassert>

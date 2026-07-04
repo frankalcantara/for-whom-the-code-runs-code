@@ -33,7 +33,8 @@
 //   minimal sheet of one record; ids that collide only as values, not as
 //   text (1 vs 01 parse to the same farmer, which is the intended law).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o granary t03-s4-2-granary-sheet.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o granary t03-s4-2-granary-sheet.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fegranary.exe t03-s4-2-granary-sheet.cpp
 
 #include <expected>
 #include <iostream>

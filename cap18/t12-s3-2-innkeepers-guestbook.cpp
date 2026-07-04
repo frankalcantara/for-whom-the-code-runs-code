@@ -36,7 +36,8 @@
 //   counts); single-letter names and queries; query at a node with
 //   no inserted name ending there but many passing through.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o guestbook t12-s3-2-innkeepers-guestbook.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o guestbook t12-s3-2-innkeepers-guestbook.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feguestbook.exe t12-s3-2-innkeepers-guestbook.cpp
 
 #include <array>
 #include <cstdint>

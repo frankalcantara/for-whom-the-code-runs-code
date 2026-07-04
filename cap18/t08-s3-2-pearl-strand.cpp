@@ -39,7 +39,8 @@
 //   duplicates inside an otherwise increasing strand (must not count
 //   twice).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o strand t08-s3-2-pearl-strand.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o strand t08-s3-2-pearl-strand.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Festrand.exe t08-s3-2-pearl-strand.cpp
 
 #include <algorithm>
 #include <iostream>

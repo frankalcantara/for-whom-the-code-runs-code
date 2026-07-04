@@ -40,7 +40,8 @@
 //   halves only at the first or last valid p; entries summing to
 //   zero overall (splits where prefix(p) = 0).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o split a5-06-pursers-split.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o split a5-06-pursers-split.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fesplit.exe a5-06-pursers-split.cpp
 
 #include <cstdint>
 #include <iostream>

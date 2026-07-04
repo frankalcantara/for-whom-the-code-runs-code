@@ -1,6 +1,7 @@
 // cap12/02-suffix-array.cpp
 // Suffix array with O(n log n) prefix doubling, plus Kasai LCP in O(n).
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o suffix_array 02-suffix-array.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o suffix_array 02-suffix-array.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fesuffix_array.exe 02-suffix-array.cpp
 
 #include <algorithm>
 #include <cassert>

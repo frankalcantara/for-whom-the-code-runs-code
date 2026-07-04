@@ -42,7 +42,8 @@
 //   (classic CRT); a = 1 (t = r2); maximum a, b coprime (L ~ 1e18,
 //   the overflow drill).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o junction t10-s4-2-junction-timetable.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o junction t10-s4-2-junction-timetable.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fejunction.exe t10-s4-2-junction-timetable.cpp
 
 #include <iostream>
 #include <numeric>

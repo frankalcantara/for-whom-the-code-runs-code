@@ -29,7 +29,8 @@
 // EDGE CASES: l = r (single reach, j = 0); the whole river (the two
 //   blocks overlap maximally); n = 1; repeated minima; depth 0.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o riverbed t05-s4-1-riverbed-survey.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o riverbed t05-s4-1-riverbed-survey.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feriverbed.exe t05-s4-1-riverbed-survey.cpp
 
 #include <algorithm>
 #include <bit>

@@ -1,6 +1,7 @@
 // cap08/03-lis-lcs.cpp
 // LIS (Longest Increasing Subsequence), LCS, and Edit Distance.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o lis_lcs 03-lis-lcs.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o lis_lcs 03-lis-lcs.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Felis_lcs.exe 03-lis-lcs.cpp
 
 #include <algorithm>
 #include <cassert>

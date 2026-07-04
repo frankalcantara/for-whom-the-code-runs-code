@@ -1,6 +1,7 @@
 // cap05/01-prefix-sum.cpp
 // Prefix sum in 1D and 2D -- construction and range-sum queries.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o prefix_sum 01-prefix-sum.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o prefix_sum 01-prefix-sum.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feprefix_sum.exe 01-prefix-sum.cpp
 
 #include <cassert>
 #include <numeric>

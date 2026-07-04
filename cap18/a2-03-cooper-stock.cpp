@@ -27,7 +27,8 @@
 //   smaller than one barrel's need; exact consumption (leftover zero);
 //   s or h equal to 1 with maximal stocks (the overflow bait).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o cooper a2-03-cooper-stock.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o cooper a2-03-cooper-stock.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fecooper.exe a2-03-cooper-stock.cpp
 
 #include <algorithm>
 #include <iostream>

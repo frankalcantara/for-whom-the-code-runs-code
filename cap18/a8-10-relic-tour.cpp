@@ -15,7 +15,8 @@
 // EDGE CASES: n=2; zero-cost edges; asymmetric costs are not
 //   required but the DP would still handle them.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o tour a8-10-relic-tour.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o tour a8-10-relic-tour.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fetour.exe a8-10-relic-tour.cpp
 
 #include <algorithm>
 #include <cstdint>

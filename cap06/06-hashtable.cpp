@@ -1,6 +1,7 @@
 // cap06/06-hashtable.cpp
 // Hash Table -- unordered_map, custom hash, and manual open addressing.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o hashtable 06-hashtable.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o hashtable 06-hashtable.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fehashtable.exe 06-hashtable.cpp
 
 #include <cassert>
 #include <bit>

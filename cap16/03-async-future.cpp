@@ -1,6 +1,7 @@
 // cap16/03-async-future.cpp
 // std::async, std::future, std::promise, and std::packaged_task.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -pthread -o async_future 03-async-future.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -pthread -o async_future 03-async-future.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feasync_future.exe 03-async-future.cpp
 
 #include <cassert>
 #include <algorithm>

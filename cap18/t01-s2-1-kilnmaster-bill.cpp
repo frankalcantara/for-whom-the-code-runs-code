@@ -23,7 +23,8 @@
 // EDGE CASES: a == b (single batch); a = 1, b = 2e9 (maximum total); pairs
 //   where a + b is odd (the even factor is then b - a + 1).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o kiln t01-s2-1-kilnmaster-bill.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o kiln t01-s2-1-kilnmaster-bill.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fekiln.exe t01-s2-1-kilnmaster-bill.cpp
 
 #include <iostream>
 #include <print>

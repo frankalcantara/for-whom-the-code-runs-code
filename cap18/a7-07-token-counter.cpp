@@ -24,7 +24,8 @@
 //   repeated coin values, which are treated as separate listed types
 //   by the input order.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o tokens a7-07-token-counter.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o tokens a7-07-token-counter.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fetokens.exe a7-07-token-counter.cpp
 
 #include <iostream>
 #include <print>

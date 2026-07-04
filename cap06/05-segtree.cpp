@@ -1,6 +1,7 @@
 // cap06/05-segtree.cpp
 // Segment Tree with lazy propagation -- range update + range query.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o segtree 05-segtree.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o segtree 05-segtree.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fesegtree.exe 05-segtree.cpp
 
 #include <algorithm>
 #include <cassert>

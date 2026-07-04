@@ -40,7 +40,8 @@
 //   readings throughout; equal readings (>= eviction keeps the
 //   newest, which is correct and keeps the deque small).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o cellar a4-04-cellar-log.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o cellar a4-04-cellar-log.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fecellar.exe a4-04-cellar-log.cpp
 
 #include <cstdio>
 #include <deque>

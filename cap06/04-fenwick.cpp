@@ -1,7 +1,8 @@
 // cap06/04-fenwick.cpp
 // Fenwick Tree (Binary Indexed Tree) -- point update + range query.
 // Variants: difference-style range update, 2D, and order-statistics patterns.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o fenwick 04-fenwick.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o fenwick 04-fenwick.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fefenwick.exe 04-fenwick.cpp
 
 #include <cassert>
 #include <print>

@@ -30,7 +30,8 @@
 //   in one barrow (answer n); single crate exactly equal to W; n = 1
 //   both fitting and not; the 1e15 full sum against W = 1e18.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o porter t05-s3-2-porters-span.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o porter t05-s3-2-porters-span.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feporter.exe t05-s3-2-porters-span.cpp
 
 #include <iostream>
 #include <print>

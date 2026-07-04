@@ -31,7 +31,8 @@
 //   all distinct; repeated identical queries (the window does not move);
 //   queries covering the whole row; n = 1.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o seedbank t05-s4-3-seed-bank.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o seedbank t05-s4-3-seed-bank.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feseedbank.exe t05-s4-3-seed-bank.cpp
 
 #include <algorithm>
 #include <cmath>

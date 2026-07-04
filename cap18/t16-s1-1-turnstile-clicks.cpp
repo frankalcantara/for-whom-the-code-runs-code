@@ -21,7 +21,8 @@
 //   because one memory location is the only shared state.
 // EDGE CASES: p > n; all zeros; all ones; n = 1.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -pthread -o clicks t16-s1-1-turnstile-clicks.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -pthread -o clicks t16-s1-1-turnstile-clicks.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feclicks.exe t16-s1-1-turnstile-clicks.cpp
 
 #include <algorithm>
 #include <atomic>

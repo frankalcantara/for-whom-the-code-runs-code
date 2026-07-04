@@ -1,6 +1,7 @@
 // cap16/02-mutex-sync.cpp
 // Mutexes, std::scoped_lock, and std::condition_variable.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -pthread -o mutex_sync 02-mutex-sync.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -pthread -o mutex_sync 02-mutex-sync.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Femutex_sync.exe 02-mutex-sync.cpp
 
 #include <cassert>
 #include <condition_variable>

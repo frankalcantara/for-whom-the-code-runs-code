@@ -4,7 +4,8 @@
 // N-Queens naive: O(n!) -- tries column placements with conflict checks.
 // Optimized N-Queens: bitmasks for columns and diagonals with efficient pruning.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o backtracking 02-backtracking.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o backtracking 02-backtracking.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Febacktracking.exe 02-backtracking.cpp
 
 #include <cassert>
 #include <algorithm>

@@ -41,7 +41,8 @@
 // EDGE CASES: n = 1 (no primes - print 0); n = 2 (one prime, itself);
 //   n prime (it is the maximum); n = 1e7 (time and memory budget).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o street t10-s2-1-numerologists-street.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o street t10-s2-1-numerologists-street.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Festreet.exe t10-s2-1-numerologists-street.cpp
 
 #include <iostream>
 #include <print>

@@ -1,6 +1,7 @@
 // cap01/01-complexity-benchmark.cpp
 // Complete benchmark for Chapter 01: empirical complexity verification.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o complexity_benchmark 01-complexity-benchmark.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o complexity_benchmark 01-complexity-benchmark.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fecomplexity_benchmark.exe 01-complexity-benchmark.cpp
 
 #include <algorithm>
 #include <array>

@@ -1,6 +1,7 @@
 // cap13/02-convex-hull.cpp
 // Andrew's monotone chain convex hull and segment intersection.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o convex 02-convex-hull.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o convex 02-convex-hull.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feconvex.exe 02-convex-hull.cpp
 
 #include <algorithm>
 #include <cassert>

@@ -1,6 +1,7 @@
 // cap15/02-contest-strategy.cpp
 // Solved strategy patterns: interval piercing, circular subarray, and bounded BFS.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o contest_strategy 02-contest-strategy.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o contest_strategy 02-contest-strategy.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fecontest_strategy.exe 02-contest-strategy.cpp
 
 #include <algorithm>
 #include <cassert>

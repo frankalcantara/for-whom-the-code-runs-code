@@ -35,7 +35,8 @@
 //   same category with n > 1 (answer 0); all categories distinct
 //   (answer n!); two dishes, same category (0) vs different (2).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o menu t07-s3-1-tasting-menu.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o menu t07-s3-1-tasting-menu.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Femenu.exe t07-s3-1-tasting-menu.cpp
 
 #include <algorithm>
 #include <iostream>

@@ -33,7 +33,8 @@
 //   orders reachable -> 2); n = 3 (5, the example, with 312 the
 //   canonical forbidden pattern); n = 1e6 (table of 2e6+1 entries).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o wagons t11-s3-1-switchyard-wagons.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o wagons t11-s3-1-switchyard-wagons.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fewagons.exe t11-s3-1-switchyard-wagons.cpp
 
 #include <iostream>
 #include <print>

@@ -34,7 +34,8 @@
 //   (classic N-Queens counts: 4 -> 2, 8 -> 92); flowerbeds that kill
 //   all solutions.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o garden t07-s4-1-sprinkler-garden.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o garden t07-s4-1-sprinkler-garden.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fegarden.exe t07-s4-1-sprinkler-garden.cpp
 
 #include <iostream>
 #include <print>

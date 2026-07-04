@@ -5,7 +5,8 @@
 // (analogous to the KMP failure function) via BFS.
 // After construction, searches a text in O(n + total_matches).
 //
-// Compile: g++ -std=c++23 -O2 -o aho-corasick 05-aho-corasick.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o aho-corasick 05-aho-corasick.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feaho-corasick.exe 05-aho-corasick.cpp
 
 #include <array>
 #include <print>

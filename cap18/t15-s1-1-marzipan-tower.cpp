@@ -27,7 +27,8 @@
 // EDGE CASES: n < 5 (0); n exactly a power of 5; n near 1e18, where
 //   careless p *= 5 loops can overflow; n = 1.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o tower t15-s1-1-marzipan-tower.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o tower t15-s1-1-marzipan-tower.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fetower.exe t15-s1-1-marzipan-tower.cpp
 
 #include <cstdint>
 #include <iostream>

@@ -33,7 +33,8 @@
 //   (the span max - min); duplicate anchors (distance 0 pairs, the search
 //   floor must include 0); all anchors equal.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o kites t04-s4-3-kite-strings.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o kites t04-s4-3-kite-strings.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fekites.exe t04-s4-3-kite-strings.cpp
 
 #include <algorithm>
 #include <iostream>

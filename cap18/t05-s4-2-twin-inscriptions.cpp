@@ -33,7 +33,7 @@
 //   against itself); len = 1; overlapping passages; claims at both ends
 //   of the band.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o twins t05-s4-2-twin-inscriptions.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o twins t05-s4-2-twin-inscriptions.cpp
 
 #include <cstdint>
 #include <iostream>

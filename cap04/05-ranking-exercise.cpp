@@ -10,7 +10,8 @@
 //         lines 2..n+1 = id score name
 // Output: k-th score, name list, count above T
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o ranking 05-ranking-exercise.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o ranking 05-ranking-exercise.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feranking.exe 05-ranking-exercise.cpp
 // Test:    printf "5 2 80\n1 95 Alice\n2 80 Bruno\n3 80 Carlos\n4 72 Diana\n5 88 Eve\n" | ./ranking
 
 #include <algorithm>

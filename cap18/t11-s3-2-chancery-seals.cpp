@@ -33,7 +33,8 @@
 //   matter - sticks of OTHER colors never help); k = 1
 //   (answer m if c_1 >= m); c_i and m at 1e9.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o seals t11-s3-2-chancery-seals.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o seals t11-s3-2-chancery-seals.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feseals.exe t11-s3-2-chancery-seals.cpp
 
 #include <iostream>
 #include <print>

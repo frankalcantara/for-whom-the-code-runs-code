@@ -14,7 +14,8 @@
 //
 // Source: Phase 1, Problem 5 — competitive programming course (2024).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o fixed_window 12-fixed-window-sum.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o fixed_window 12-fixed-window-sum.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fefixed_window.exe 12-fixed-window-sum.cpp
 
 #include <cassert>
 #include <numeric>   // std::accumulate

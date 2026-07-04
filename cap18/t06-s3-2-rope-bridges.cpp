@@ -35,7 +35,8 @@
 //   same component is a no-op); bridge joining already-connected huts
 //   via a longer path; n = 1.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o bridges t06-s3-2-rope-bridges.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o bridges t06-s3-2-rope-bridges.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Febridges.exe t06-s3-2-rope-bridges.cpp
 
 #include <iostream>
 #include <print>

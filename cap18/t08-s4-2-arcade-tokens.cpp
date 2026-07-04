@@ -39,7 +39,8 @@
 //   else 0); answer needing the modulus (large t, denomination 1
 //   present makes counts explode combinatorially).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o tokens t08-s4-2-arcade-tokens.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o tokens t08-s4-2-arcade-tokens.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fetokens.exe t08-s4-2-arcade-tokens.cpp
 
 #include <iostream>
 #include <print>

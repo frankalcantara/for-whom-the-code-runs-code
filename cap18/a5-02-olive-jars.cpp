@@ -41,7 +41,8 @@
 //   non-negative split (impossible, e.g. a=5, b=3, v=7 has none);
 //   v exactly one jar; b' = 1 (every residue allowed, xmin = 0).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o jars a5-02-olive-jars.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o jars a5-02-olive-jars.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fejars.exe a5-02-olive-jars.cpp
 
 #include <cstdint>
 #include <iostream>

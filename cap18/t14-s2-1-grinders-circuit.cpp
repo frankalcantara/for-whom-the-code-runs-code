@@ -33,7 +33,8 @@
 //   symmetric by contract, but the DP never assumes it); maximum
 //   n with maximum distances (the int32 ceiling argument above).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o circuit t14-s2-1-grinders-circuit.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o circuit t14-s2-1-grinders-circuit.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fecircuit.exe t14-s2-1-grinders-circuit.cpp
 
 #include <algorithm>
 #include <cstdint>

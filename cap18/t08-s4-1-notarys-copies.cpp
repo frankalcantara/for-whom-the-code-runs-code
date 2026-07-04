@@ -37,7 +37,8 @@
 //   (pure insertions); disjoint alphabets (max(n, m)); single
 //   characters, equal and different (0 and 1).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o copies t08-s4-1-notarys-copies.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o copies t08-s4-1-notarys-copies.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fecopies.exe t08-s4-1-notarys-copies.cpp
 
 #include <algorithm>
 #include <iostream>

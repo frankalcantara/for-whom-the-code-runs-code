@@ -35,7 +35,8 @@
 //   excluded by the statement; disconnected graphs are handled by
 //   the traversal from all unmatched left vertices.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o switchboard t14-s4-3-studio-switchboard.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o switchboard t14-s4-3-studio-switchboard.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feswitchboard.exe t14-s4-3-studio-switchboard.cpp
 
 #include <algorithm>
 #include <cstdint>

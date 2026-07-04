@@ -1,6 +1,7 @@
 // cap09/04-scc-lca.cpp
 // Strongly Connected Components (Kosaraju) and LCA with binary lifting.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o scc_lca 04-scc-lca.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o scc_lca 04-scc-lca.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fescc_lca.exe 04-scc-lca.cpp
 
 #include <algorithm>
 #include <cassert>

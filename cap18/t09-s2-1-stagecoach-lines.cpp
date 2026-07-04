@@ -38,7 +38,8 @@
 //   cheapest); a tempting direct line beaten by a chain (the
 //   example); maximum-length cheapest route (overflow drill).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o coach t09-s2-1-stagecoach-lines.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o coach t09-s2-1-stagecoach-lines.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fecoach.exe t09-s2-1-stagecoach-lines.cpp
 
 #include <iostream>
 #include <limits>

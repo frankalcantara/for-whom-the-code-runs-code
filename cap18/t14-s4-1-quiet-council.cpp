@@ -36,7 +36,8 @@
 //   still handled by the available-mask DP); disconnected components
 //   require no special case.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o council t14-s4-1-quiet-council.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o council t14-s4-1-quiet-council.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fecouncil.exe t14-s4-1-quiet-council.cpp
 
 #include <algorithm>
 #include <bit>

@@ -22,7 +22,8 @@
 // Source: Wipro competitive programming contest — "Square Free Numbers" (2024).
 //   Original C++ solution rewritten in C++23.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o square_free 05-square-free.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o square_free 05-square-free.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fesquare_free.exe 05-square-free.cpp
 
 #include <cassert>
 #include <cmath>       // std::sqrt

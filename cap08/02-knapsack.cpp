@@ -1,6 +1,7 @@
 // cap08/02-knapsack.cpp
 // 0/1 Knapsack, unbounded knapsack, and Subset Sum with DP.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o knapsack 02-knapsack.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o knapsack 02-knapsack.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feknapsack.exe 02-knapsack.cpp
 
 #include <cassert>
 #include <algorithm>

@@ -29,7 +29,8 @@
 //   entries split across line boundaries (the parser must not care about
 //   newlines); the +-1e16 drift.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o tape a3-04-counting-tape.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o tape a3-04-counting-tape.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fetape.exe a3-04-counting-tape.cpp
 
 #include <algorithm>
 #include <cstdio>

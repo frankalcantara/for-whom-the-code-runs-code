@@ -31,7 +31,8 @@
 //   (answer n, border may still be positive, e.g. abcab -> 5);
 //   border exactly n/2 (abab -> 2); n = 1e6 single letter.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o carillon t12-s2-1-carillon-phrase.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o carillon t12-s2-1-carillon-phrase.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fecarillon.exe t12-s2-1-carillon-phrase.cpp
 
 #include <iostream>
 #include <print>

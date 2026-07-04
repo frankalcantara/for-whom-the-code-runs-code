@@ -28,7 +28,8 @@
 //   (n! - a bijection); k = 2 (2^n - 2, the example's family);
 //   n = k = 1; n = 1e6 with k = 1 (power loop dominates).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o favors a6-01-festival-favors.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o favors a6-01-festival-favors.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fefavors.exe a6-01-festival-favors.cpp
 
 #include <iostream>
 #include <print>

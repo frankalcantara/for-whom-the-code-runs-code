@@ -34,7 +34,8 @@
 //   sliver (cancellation is exact in integers); n = 3; the
 //   half-unit area (the example - parity prints .5).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o tithe t13-s1-1-tithe-field.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o tithe t13-s1-1-tithe-field.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fetithe.exe t13-s1-1-tithe-field.cpp
 
 #include <cstdlib>
 #include <iostream>

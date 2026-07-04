@@ -1,7 +1,8 @@
 // cap05/05-kadane-two-pointers.cpp
 // Kadane's Algorithm: maximum contiguous subarray -- O(n)
 // Two Pointers: subarray with sum equal to target -- O(n)
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o kadane_tp 05-kadane-two-pointers.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o kadane_tp 05-kadane-two-pointers.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fekadane_tp.exe 05-kadane-two-pointers.cpp
 
 #include <algorithm>
 #include <cassert>

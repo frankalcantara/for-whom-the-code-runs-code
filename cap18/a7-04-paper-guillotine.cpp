@@ -23,7 +23,8 @@
 // EDGE CASES: k = 1 (sum of all pages); k = n (maximum single job);
 //   one enormous job; all jobs equal.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o guillotine a7-04-paper-guillotine.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o guillotine a7-04-paper-guillotine.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feguillotine.exe a7-04-paper-guillotine.cpp
 
 #include <algorithm>
 #include <iostream>

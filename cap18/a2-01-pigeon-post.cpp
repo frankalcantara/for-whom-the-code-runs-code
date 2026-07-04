@@ -29,7 +29,8 @@
 //   audited town; the audited name sharing a prefix with another town
 //   (ravenna vs ravensburg must not match); n = 1.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o pigeon a2-01-pigeon-post.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o pigeon a2-01-pigeon-post.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fepigeon.exe a2-01-pigeon-post.cpp
 
 #include <iostream>
 #include <print>

@@ -36,7 +36,8 @@
 //   (0); a multiple of p (0 for b > 0 - the reduction handles it);
 //   a = 1e18, b = 1e18 (the overflow drill end to end).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o yeast t10-s3-1-yeast-vats.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o yeast t10-s3-1-yeast-vats.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Feyeast.exe t10-s3-1-yeast-vats.cpp
 
 #include <iostream>
 #include <print>

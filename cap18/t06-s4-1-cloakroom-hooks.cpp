@@ -8,7 +8,7 @@
 //   erase-minimum, insert. An ordered set signs exactly this contract.
 // MATH: a red-black tree keeps the free hooks sorted; begin() is the
 //   minimum, erase and insert rebalance locally. All three primitives
-//   are O(log n) with begin() amortized O(1) in libstdc++ (the leftmost
+//   are O(log n) with begin() amortized O(1) in the standard-library implementation (the leftmost
 //   pointer is cached).
 // PROOF: the invariant is "the set contains exactly the free hooks".
 //   Arrival removes the minimum (the smallest free hook, by the order
@@ -32,7 +32,8 @@
 //   next assigned); departures in arbitrary order; n = 1 cycling
 //   take/free; assignment after the pool refills past previous holes.
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o cloakroom t06-s4-1-cloakroom-hooks.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o cloakroom t06-s4-1-cloakroom-hooks.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fecloakroom.exe t06-s4-1-cloakroom-hooks.cpp
 
 #include <iostream>
 #include <numeric>

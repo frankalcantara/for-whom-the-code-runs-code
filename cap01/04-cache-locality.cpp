@@ -1,7 +1,8 @@
 // cap01/04-cache-locality.cpp
 // Matrix multiplication: the performance impact of memory access order.
 // Three versions: i-j-k (cache-hostile), i-k-j (cache-friendly), block tiling.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o cache_locality 04-cache-locality.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o cache_locality 04-cache-locality.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fecache_locality.exe 04-cache-locality.cpp
 
 #include <algorithm>
 #include <array>

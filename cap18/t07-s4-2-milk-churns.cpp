@@ -35,7 +35,8 @@
 //   gcd-unreachable c (e.g. a = 6, b = 4, c = 3); a = b with c not in
 //   {0, a} (impossible); a = 1 (every c <= 1 reachable fast).
 //
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o churns t07-s4-2-milk-churns.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o churns t07-s4-2-milk-churns.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /Fechurns.exe t07-s4-2-milk-churns.cpp
 
 #include <iostream>
 #include <print>

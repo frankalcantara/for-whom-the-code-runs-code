@@ -1,7 +1,7 @@
 // cap03/04-mmap.cpp
 // Memory-mapped file I/O — Linux/macOS only (POSIX)
 // Maps the file into virtual address space: no read() calls, kernel handles paging.
-// Compile: g++ -O2 -std=c++23 -Wall -Wextra -o mmap_io 04-mmap.cpp
+// Compile (LLVM): clang++-23 -std=c++23 -stdlib=libc++ -O2 -Wall -Wextra -o mmap_io 04-mmap.cpp
 // Test:    echo "5 1 2 3 4 5" > /tmp/test.txt && ./mmap_io /tmp/test.txt
 
 #include <cstdio>
