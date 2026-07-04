@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# WSL/Linux compile check for the complete companion repository.
+# WSL/Linux/Windows compile check for the complete companion repository.
 # The script probes the available C++23 toolchains once, then compiles each
 # source file with the first compiler/standard-library pair that supports the
 # features used by that file.
@@ -8,19 +8,22 @@
 set -u
 set -o pipefail
 
+export PATH="/usr/bin:/bin:$PATH"
+
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT_DIR="$SCRIPT_DIR"
 BUILD_DIR="${BUILD_DIR:-$ROOT_DIR/.compile-check}"
 REPORT="${REPORT:-$ROOT_DIR/compilation-report.txt}"
 LLVM_VERSION="${LLVM_VERSION:-}"
 GCC_VERSION="${GCC_VERSION:-}"
-TOOLCHAIN_ORDER="${TOOLCHAIN_ORDER:-clang-libc++ clang-libc++-experimental clang-libstdc++ clang-libstdc++-tbb gcc gcc-tbb}"
+TOOLCHAIN_ORDER="${TOOLCHAIN_ORDER:-clang-libc++ clang-libc++-experimental clang-libstdc++ clang-libstdc++-tbb gcc gcc-tbb msvc}"
 
 COMMON_CXXFLAGS=(-std=c++23 -O2 -Wall -Wextra -pthread)
 
 declare -a TOOLCHAIN_IDS=()
 declare -A TOOLCHAIN_LABEL=()
 declare -A TOOLCHAIN_COMPILER=()
+declare -A TOOLCHAIN_KIND=()
 declare -A TOOLCHAIN_CXXFLAGS=()
 declare -A TOOLCHAIN_LDFLAGS=()
 declare -A TOOLCHAIN_CAPS=()
@@ -38,6 +41,7 @@ Options:
 Environment:
   LLVM_VERSION    Prefer clang++-$LLVM_VERSION when present.
   GCC_VERSION     Prefer g++-$GCC_VERSION when present.
+  MSVC_VSDEVCMD   Path to VsDevCmd.bat when auto-discovery is not enough.
   BUILD_DIR       Output directory (default: .compile-check).
   REPORT          Report file (default: compilation-report.txt).
   TOOLCHAIN_ORDER Space-separated candidate order.
@@ -241,19 +245,186 @@ add_toolchain() {
     local compiler="$3"
     local cxxflags="$4"
     local ldflags="$5"
+    local kind="${6:-posix}"
 
     TOOLCHAIN_IDS+=("$id")
     TOOLCHAIN_LABEL["$id"]="$label"
     TOOLCHAIN_COMPILER["$id"]="$compiler"
+    TOOLCHAIN_KIND["$id"]="$kind"
     TOOLCHAIN_CXXFLAGS["$id"]="$cxxflags"
     TOOLCHAIN_LDFLAGS["$id"]="$ldflags"
     TOOLCHAIN_CAPS["$id"]=""
     TOOLCHAIN_SELECTED_COUNT["$id"]=0
 }
 
+path_to_windows() {
+    local path="$1"
+    local drive
+    local rest
+
+    if command -v cygpath >/dev/null 2>&1; then
+        cygpath -w "$path"
+        return
+    fi
+
+    if command -v wslpath >/dev/null 2>&1; then
+        wslpath -w "$path"
+        return
+    fi
+
+    if [[ "$path" =~ ^/mnt/([A-Za-z])/(.*)$ ]]; then
+        drive="${BASH_REMATCH[1]}"
+        rest="${BASH_REMATCH[2]//\//\\}"
+        printf '%s:\\%s\n' "$(printf '%s' "$drive" | tr '[:lower:]' '[:upper:]')" "$rest"
+        return
+    fi
+
+    if [[ "$path" =~ ^/([A-Za-z])/(.*)$ ]]; then
+        drive="${BASH_REMATCH[1]}"
+        rest="${BASH_REMATCH[2]//\//\\}"
+        printf '%s:\\%s\n' "$(printf '%s' "$drive" | tr '[:lower:]' '[:upper:]')" "$rest"
+        return
+    fi
+
+    printf '%s\n' "$path"
+}
+
+path_to_bash() {
+    local path="$1"
+    local drive
+    local rest
+
+    if [[ "$path" != *\\* && ! "$path" =~ ^[A-Za-z]: ]]; then
+        printf '%s\n' "$path"
+        return
+    fi
+
+    if command -v cygpath >/dev/null 2>&1; then
+        cygpath -u "$path"
+        return
+    fi
+
+    if command -v wslpath >/dev/null 2>&1; then
+        wslpath -u "$path"
+        return
+    fi
+
+    drive="${path:0:1}"
+    rest="${path:2}"
+    rest="${rest//\\//}"
+    drive="$(printf '%s' "$drive" | tr '[:upper:]' '[:lower:]')"
+    printf '/mnt/%s/%s\n' "$drive" "$rest"
+}
+
+find_vsdevcmd() {
+    local vswhere
+    local install
+    local install_bash
+    local candidate
+    local -a vswhere_candidates=()
+
+    if [ -n "${MSVC_VSDEVCMD:-}" ]; then
+        printf '%s\n' "$(path_to_windows "$MSVC_VSDEVCMD")"
+        return
+    fi
+
+    if command -v vswhere.exe >/dev/null 2>&1; then
+        vswhere_candidates+=("$(command -v vswhere.exe)")
+    fi
+
+    for candidate in \
+        "/mnt/c/Program Files (x86)/Microsoft Visual Studio/Installer/vswhere.exe" \
+        "/c/Program Files (x86)/Microsoft Visual Studio/Installer/vswhere.exe"; do
+        if [ -f "$candidate" ]; then
+            vswhere_candidates+=("$candidate")
+        fi
+    done
+
+    for vswhere in "${vswhere_candidates[@]}"; do
+        install="$(
+            "$vswhere" -latest -products '*' \
+                -requires Microsoft.VisualStudio.Component.VC.Tools.x86.x64 \
+                -property installationPath 2>/dev/null |
+                tr -d '\r' |
+                head -n 1
+        )"
+        if [ -z "$install" ]; then
+            continue
+        fi
+
+        install_bash="$(path_to_bash "$install")"
+        candidate="$install_bash/Common7/Tools/VsDevCmd.bat"
+        if [ -f "$candidate" ]; then
+            path_to_windows "$candidate"
+            return
+        fi
+    done
+}
+
+msvc_compile() {
+    local vcvars="$1"
+    local source="$2"
+    local output="$3"
+    local error_file="$4"
+    local flags="$5"
+    local win_source
+    local win_output
+    local win_object
+    local bat_file
+    local win_bat
+
+    if ! command -v cmd.exe >/dev/null 2>&1; then
+        printf 'cmd.exe is required to invoke MSVC from this shell.\n' >"$error_file"
+        return 1
+    fi
+
+    win_source="$(path_to_windows "$source")"
+    win_output="$(path_to_windows "$output.exe")"
+    win_object="$(path_to_windows "$output.obj")"
+    bat_file="$output.msvc.bat"
+    win_bat="$(path_to_windows "$bat_file")"
+
+    cat > "$bat_file" <<EOF
+@echo off
+call "$vcvars" -arch=x64 -host_arch=x64 >nul
+if errorlevel 1 exit /b %errorlevel%
+cl /nologo $flags /Fe"$win_output" /Fo"$win_object" "$win_source"
+exit /b %errorlevel%
+EOF
+
+    cmd.exe //s //c "$win_bat" >"$error_file" 2>&1
+}
+
+msvc_version() {
+    local vcvars="$1"
+    local probe_dir="$BUILD_DIR/feature-tests/msvc"
+    local bat_file
+    local win_bat
+
+    if ! command -v cmd.exe >/dev/null 2>&1; then
+        return
+    fi
+
+    mkdir -p "$probe_dir" || return
+    bat_file="$probe_dir/msvc-version.bat"
+    win_bat="$(path_to_windows "$bat_file")"
+
+    cat > "$bat_file" <<EOF
+@echo off
+call "$vcvars" -arch=x64 -host_arch=x64 >nul
+if errorlevel 1 exit /b %errorlevel%
+cl 2>&1
+EOF
+
+    cmd.exe //s //c "$win_bat" 2>/dev/null |
+        tr -d '\r' |
+        grep -i -m 1 'compiler version'
+}
+
 discover_toolchains() {
     local clang
     local gcc
+    local msvc
     local libcxx_flags
     local libcxx_cxxflags
     local libcxx_ldflags
@@ -310,6 +481,17 @@ discover_toolchains() {
             "$gcc" \
             "$(join_by_space "${COMMON_CXXFLAGS[@]}")" \
             "-ltbb"
+    fi
+
+    msvc="$(find_vsdevcmd || true)"
+    if [ -n "$msvc" ]; then
+        add_toolchain \
+            "msvc" \
+            "MSVC cl.exe via VsDevCmd.bat" \
+            "$msvc" \
+            "/std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus" \
+            "" \
+            "msvc"
     fi
 }
 
@@ -444,6 +626,26 @@ int main() {
 }
 CPP
             ;;
+        int128)
+            cat > "$file" <<'CPP'
+int main() {
+    __int128 value = 1;
+    value <<= 80;
+    return value > 0 ? 0 : 1;
+}
+CPP
+            ;;
+        posix-mmap)
+            cat > "$file" <<'CPP'
+#include <fcntl.h>
+#include <sys/mman.h>
+#include <sys/stat.h>
+#include <unistd.h>
+int main() {
+    return 0;
+}
+CPP
+            ;;
         *)
             return 1
             ;;
@@ -461,8 +663,13 @@ run_feature_test() {
     local -a cxxflags
     local -a ldflags
 
-    mkdir -p "$probe_dir"
+    mkdir -p "$probe_dir" || return 1
     feature_source "$feature" "$source"
+
+    if [ "${TOOLCHAIN_KIND[$id]}" = "msvc" ]; then
+        msvc_compile "${TOOLCHAIN_COMPILER[$id]}" "$source" "$output" "$error_file" "${TOOLCHAIN_CXXFLAGS[$id]}"
+        return
+    fi
 
     read -r -a cxxflags <<< "${TOOLCHAIN_CXXFLAGS[$id]}"
     read -r -a ldflags <<< "${TOOLCHAIN_LDFLAGS[$id]}"
@@ -479,12 +686,16 @@ probe_toolchain() {
     log ""
     log "Toolchain: $id (${TOOLCHAIN_LABEL[$id]})"
     log "Compiler: ${TOOLCHAIN_COMPILER[$id]}"
-    version="$("${TOOLCHAIN_COMPILER[$id]}" --version 2>/dev/null | head -n 1 || true)"
+    if [ "${TOOLCHAIN_KIND[$id]}" = "msvc" ]; then
+        version="$(msvc_version "${TOOLCHAIN_COMPILER[$id]}" || true)"
+    else
+        version="$("${TOOLCHAIN_COMPILER[$id]}" --version 2>/dev/null | head -n 1 || true)"
+    fi
     log "Version: ${version:-unknown}"
     log "CXXFLAGS: ${TOOLCHAIN_CXXFLAGS[$id]}"
     log "LDFLAGS: ${TOOLCHAIN_LDFLAGS[$id]:-}"
 
-    for feature in print format ranges ranges23 expected expected-monadic jthread execution generator; do
+    for feature in print format ranges ranges23 expected expected-monadic jthread execution generator int128 posix-mmap; do
         if run_feature_test "$id" "$feature"; then
             caps="$caps $feature"
             log "  ok   $feature"
@@ -534,6 +745,14 @@ source_requires() {
     if grep -Eq '#include <generator>|std::generator' "$file"; then
         required="$required generator"
     fi
+    if grep -Eq '^[[:space:]]*(const[[:space:]]+)?(__uint128_t|__int128)[[:space:]*&]+[A-Za-z_]|^[[:space:]]*unsigned[[:space:]]+__int128[[:space:]*&]+[A-Za-z_]|static_cast<(__uint128_t|unsigned[[:space:]]+__int128|__int128)>' "$file"; then
+        required="$required int128"
+    fi
+    case "$file" in
+        */cap03/04-mmap.cpp)
+            required="$required posix-mmap"
+            ;;
+    esac
 
     printf '%s\n' "$required" | xargs -n1 2>/dev/null | awk '!seen[$0]++' | xargs 2>/dev/null || true
 }
@@ -580,6 +799,11 @@ compile_with_toolchain() {
     local -a cxxflags
     local -a ldflags
 
+    if [ "${TOOLCHAIN_KIND[$id]}" = "msvc" ]; then
+        msvc_compile "$compiler" "$source" "$output" "$error_file" "${TOOLCHAIN_CXXFLAGS[$id]}"
+        return
+    fi
+
     read -r -a cxxflags <<< "${TOOLCHAIN_CXXFLAGS[$id]}"
     read -r -a ldflags <<< "${TOOLCHAIN_LDFLAGS[$id]}"
 
@@ -604,6 +828,9 @@ compile_repository() {
     mapfile -t files < <(
         find "$ROOT_DIR" \
             -path "$BUILD_DIR" -prune -o \
+            -path "$ROOT_DIR/.compile-check" -prune -o \
+            -path "$ROOT_DIR/.compile-check-msvc" -prune -o \
+            -path "$ROOT_DIR/.bench-msvc" -prune -o \
             -type f -name '*.cpp' -print | sort
     )
     total="${#files[@]}"
@@ -695,13 +922,20 @@ if [ "$CLEAN" -eq 1 ]; then
     esac
 fi
 
-mkdir -p "$BUILD_DIR"
-{
+if ! mkdir -p "$BUILD_DIR"; then
+    printf 'Cannot create build directory: %s\n' "$BUILD_DIR" >&2
+    exit 1
+fi
+
+if ! {
     printf 'Compilation report - %s\n' "$(date)"
     printf 'Root: %s\n' "$ROOT_DIR"
     printf 'Build directory: %s\n' "$BUILD_DIR"
     printf 'Toolchain order: %s\n\n' "$TOOLCHAIN_ORDER"
-} > "$REPORT"
+} > "$REPORT"; then
+    printf 'Cannot write compilation report: %s\n' "$REPORT" >&2
+    exit 1
+fi
 
 if ! grep -qi microsoft /proc/version 2>/dev/null; then
     log "Note: /proc/version does not look like WSL. Continuing as a Linux build."
