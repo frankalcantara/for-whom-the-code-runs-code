@@ -23,6 +23,8 @@ int main() {
     // separate min/max pass is needed for this small retained set.
     std::ranges::sort(measured);
 
+    // Subtracting one before division makes even-sized samples choose the lower
+    // median, matching the problem statement instead of averaging two values.
     const auto middle = (measured.size() - 1) / 2;
     std::print("{} {} {}\n", measured.front(), measured[middle], measured.back());
 }

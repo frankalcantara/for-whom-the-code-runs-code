@@ -12,6 +12,8 @@ int main() {
     int flashes = 0;
     unsigned long long power = 1;
 
+    // At the start of each iteration, power is the next flash strength not yet
+    // counted; all smaller powers of two have already been accepted.
     while (power <= n) {
         ++flashes;
 

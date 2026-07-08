@@ -16,6 +16,9 @@ int main() {
     for (int i = 0; i < n; ++i) {
         long long value = 0;
         std::cin >> value;
+
+        // The ledger records every declaration, including values rejected by
+        // the old int counter, so accumulation happens before the range test.
         sum += value;
 
         // Testing the wide value preserves the evidence needed to decide whether

@@ -12,6 +12,8 @@ int main() {
     int flashes = 0;
     unsigned long long power = 1;
 
+    // At the start of each iteration, power is the next flash strength not yet
+    // counted; once doubling would exceed n, every later power is invalid too.
     while (power <= n) {
         ++flashes;
 

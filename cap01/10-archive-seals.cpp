@@ -16,7 +16,8 @@ int main() {
     for (auto& seal : seals) std::cin >> seal;
 
     // Adjacent equal codes turn the set-cardinality question into counting group
-    // representatives, which avoids the quadratic "have I seen this before?" scan.
+    // representatives, which avoids the quadratic "have I seen this before?"
+    // scan and keeps memory access contiguous.
     std::ranges::sort(seals);
 
     // unique compacts one representative of each sorted group; the vector size is

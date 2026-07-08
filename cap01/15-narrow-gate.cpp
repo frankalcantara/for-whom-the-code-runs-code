@@ -16,6 +16,9 @@ int main() {
     for (int i = 0; i < n; ++i) {
         long long value = 0;
         std::cin >> value;
+
+        // The new ledger is independent from the old counter, so even rejected
+        // values must contribute to the sum.
         sum += value;
 
         // The interval test must happen while the original wide value is still

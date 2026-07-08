@@ -13,6 +13,8 @@
 typedef int (*Counter)(const std::vector<int>&);
 
 long long benchmark_count(const std::vector<int>& data, Counter counter) {
+    // All strategies receive the same immutable input, so timing differences
+    // come from the counting method rather than from data generation.
     long long times[7] = {};
     int checksum = 0;
 
@@ -70,12 +72,16 @@ int count_distinct_naive(const std::vector<int>& a) {
 }
 
 int count_distinct_sort(const std::vector<int>& data) {
+    // Sorting must not destroy the shared benchmark input, so this strategy
+    // works on its own copy while the other strategies see the original data.
     std::vector<int> a = data;
 
     // Sorting turns duplicate detection into a local comparison between
     // neighbors, trading extra comparisons for contiguous memory access.
     std::sort(a.begin(), a.end());
 
+    // unique moves one representative of each equal run to the front; the
+    // iterator marks the logical end of the deduplicated prefix.
     std::vector<int>::iterator unique_end = std::unique(a.begin(), a.end());
     return static_cast<int>(unique_end - a.begin());
 }
@@ -95,6 +101,8 @@ int count_distinct_hash(const std::vector<int>& a) {
 }
 
 std::vector<int> generate(int n) {
+    // A fixed seed keeps each run reproducible; the input size changes while the
+    // data distribution remains comparable across strategies.
     std::mt19937 rng(42);
     std::uniform_int_distribution<int> dist(1, 1000000);
     std::vector<int> v(n);
@@ -133,6 +141,9 @@ int main() {
         long long sort_us = benchmark_count(data, count_distinct_sort);
         long long hash_us = benchmark_count(data, count_distinct_hash);
 
+        // The hash answer is used as a reference because it is simple and fast
+        // enough for all tested sizes, while the naive method is checked only
+        // before its quadratic cost becomes intentionally skipped.
         int reference = count_distinct_hash(data);
         if (n <= 10000 &&
             (count_distinct_naive(data) != reference ||

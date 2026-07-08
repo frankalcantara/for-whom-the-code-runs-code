@@ -25,6 +25,9 @@ int main() {
     std::sort(measured.begin(), measured.end());
 
     int retained = static_cast<int>(measured.size());
+
+    // (retained - 1) / 2 selects the only middle element for odd sizes and the
+    // last element of the lower half for even sizes.
     int middle = (retained - 1) / 2;
 
     std::print("{} {} {}\n", measured[0], measured[middle],

@@ -10,6 +10,8 @@ int main() {
     long double n = 0;
     std::cin >> n;
 
+    // The models are real-valued estimates; long double keeps enough precision
+    // for the comparison before the final presentation is rounded.
     long double log_n = std::log2(n);
     long double north = 3.0L * n * log_n * log_n;
     long double south = 0.5L * n * std::sqrt(n);

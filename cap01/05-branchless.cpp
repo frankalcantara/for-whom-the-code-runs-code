@@ -21,6 +21,8 @@ using Clock = std::chrono::steady_clock;
 static long long sum_branchy(const std::vector<int>& a, int t) {
     long long s = 0;
     for (int x : a)
+        // On unsorted random data this condition changes direction frequently,
+        // forcing the branch predictor to guess a hard pattern.
         if (x > t) s += static_cast<long long>(x) * x + (x ^ 0x5bd1e995);
     return s;
 }
@@ -28,8 +30,10 @@ static long long sum_branchy(const std::vector<int>& a, int t) {
 static long long sum_branchless(const std::vector<int>& a, int t) {
     long long s = 0;
     for (int x : a) {
+        // The expensive expression is computed for every element so the final
+        // multiply can turn the predicate into either "keep it" or "zero it".
         long long contrib = static_cast<long long>(x) * x + (x ^ 0x5bd1e995);
-        s += contrib * (x > t);   // decision folded into arithmetic, no branch
+        s += contrib * (x > t);
     }
     return s;
 }
@@ -37,12 +41,17 @@ static long long sum_branchless(const std::vector<int>& a, int t) {
 template <class F>
 static double time_ms(F&& f) {
     auto t0 = Clock::now();
-    volatile long long sink = f();   // volatile keeps the work from being elided
+
+    // The reduction result is observed through volatile so the optimizer cannot
+    // remove the entire timed loop merely because the printed output uses time.
+    volatile long long sink = f();
     (void)sink;
     return std::chrono::duration<double, std::milli>(Clock::now() - t0).count();
 }
 
 int main() {
+    // The threshold is near the middle of the random range, producing an almost
+    // fifty-fifty branch on unsorted data: the hardest case for prediction.
     const int n = 20'000'000;
     const int threshold = 500'000'000;
 
@@ -51,9 +60,13 @@ int main() {
     std::vector<int> data(n);
     for (int& x : data) x = dist(rng);
 
+    // These two timings compare unpredictable control flow against explicit
+    // arithmetic masking while the values are still in random order.
     double unsorted = time_ms([&] { return sum_branchy(data, threshold); });
     double bless1   = time_ms([&] { return sum_branchless(data, threshold); });
 
+    // Sorting groups the failed tests before the successful tests, giving the
+    // branch predictor long runs with the same outcome.
     std::ranges::sort(data);
     double sorted = time_ms([&] { return sum_branchy(data, threshold); });
     double bless2 = time_ms([&] { return sum_branchless(data, threshold); });

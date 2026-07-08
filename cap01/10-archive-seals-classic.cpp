@@ -17,7 +17,8 @@ int main() {
     }
 
     // Sorting is the step that makes duplicates local; after it, each distinct
-    // code begins exactly one contiguous group.
+    // code begins exactly one contiguous group, so the problem becomes counting
+    // group representatives instead of remembering every value already seen.
     std::sort(seals.begin(), seals.end());
 
     // unique does not shrink the vector, so the iterator distance to the new

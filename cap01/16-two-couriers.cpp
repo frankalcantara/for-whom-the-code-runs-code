@@ -10,6 +10,8 @@ int main() {
     long double n = 0;
     std::cin >> n;
 
+    // The common factor n stays in both printed estimates, while the comparison
+    // still reflects the exact formulas given by the problem.
     const long double log_n = std::log2(n);
     const long double north = 3.0L * n * log_n * log_n;
     const long double south = 0.5L * n * std::sqrt(n);

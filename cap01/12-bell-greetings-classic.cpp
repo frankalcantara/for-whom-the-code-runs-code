@@ -9,6 +9,8 @@ int main() {
     long long n = 0;
     std::cin >> n;
 
+    // Counting ordered pairs gives n choices for the first keeper and n - 1 for
+    // the second; dividing by two removes the two possible orders of each pair.
     // The expression is evaluated in long long because n is long long; otherwise
     // the multiplication could overflow before the division by two.
     long long greetings = n * (n - 1) / 2;

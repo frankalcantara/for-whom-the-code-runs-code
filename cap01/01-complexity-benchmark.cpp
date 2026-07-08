@@ -21,6 +21,8 @@ long long benchmark(Fn&& fn) {
     std::array<long long, Runs> times{};
 
     for (std::size_t i = 0; i < Runs; ++i) {
+        // The benchmark wrapper times only the supplied strategy; input
+        // generation and correctness checks stay outside the measured region.
         auto t0 = chr::high_resolution_clock::now();
         fn();
         auto t1 = chr::high_resolution_clock::now();
@@ -54,6 +56,8 @@ int count_distinct_naive(const std::vector<int>& a) {
 }
 
 int count_distinct_sort(std::vector<int> a) {
+    // The vector is passed by value because sorting is destructive and the
+    // benchmark must keep the original data available for the other strategies.
     // Sorting pays n log n comparisons to buy locality: each later duplicate check
     // compares with the previous element instead of probing scattered history.
     std::ranges::sort(a);
@@ -70,12 +74,17 @@ int count_distinct_hash(const std::vector<int>& a) {
     // Reserving makes the benchmark about hashing and memory locality, not about
     // repeated table growth during insertion.
     seen.reserve(a.size());
+
+    // A low load factor reduces collisions so the measured cost is dominated by
+    // node allocation and pointer chasing, the behavior discussed in the text.
     seen.max_load_factor(0.25f);
     for (int x : a) seen.insert(x);
     return static_cast<int>(seen.size());
 }
 
 std::vector<int> generate(int n, int max_value = 1'000'000, unsigned seed = 42) {
+    // A fixed seed gives every strategy the same reproducible workload; changing
+    // n changes scale without changing the statistical shape of the data.
     std::mt19937 rng{seed};
     std::uniform_int_distribution<int> dist{1, max_value};
     std::vector<int> v(n);
@@ -100,6 +109,8 @@ int main() {
         long long sort_us = benchmark([&] { count_distinct_sort(data); });
         long long hash_us = benchmark([&] { count_distinct_hash(data); });
 
+        // The fast hash implementation is used as a reference, then the other
+        // strategies are compared against it where their cost is still practical.
         int ref = count_distinct_hash(data);
         if (n <= 10'000) {
             int naive_answer = count_distinct_naive(data);

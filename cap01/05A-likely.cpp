@@ -1,10 +1,10 @@
-// cap01/06-compiler-hints.cpp
+// cap01/05A-likely.cpp
 // Demonstrates compiler hints: [[unlikely]], std::unreachable(), and [[assume()]].
 // The code compares a standard safe loop against a heavily hinted loop.
 // Note: Modern branch predictors are excellent, so the performance gap 
 // heavily depends on the CPU architecture and the complexity of the pipeline.
-// Compile (LLVM): clang++ -std=c++23 -O2 -Wall -Wextra -o hints 06-compiler-hints.cpp
-// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /Fehints.exe 06-compiler-hints.cpp
+// Compile (LLVM): clang++ -std=c++23 -O2 -Wall -Wextra -o hints 05A-likely.cpp
+// Compile (MSVC): cl /std:c++latest /O2 /EHsc /W4 /Fehints.exe 05A-likely.cpp
 
 #include <chrono>
 #include <cstdint>
@@ -18,6 +18,8 @@ using Clock = std::chrono::steady_clock;
 enum class State : uint8_t { A, B, C, D };
 
 struct Instruction {
+    // Keeping the state and value together models a stream of small operations;
+    // the benchmark measures dispatch overhead rather than container lookups.
     State state;
     int value;
 };
@@ -29,7 +31,10 @@ static int handle_standard(State s, int val) {
     case State::B: return val - 1;
     case State::C: return val * 2;
     case State::D: return val / 2;
-    default: return 0; // Compiler must generate code for this branch
+    default:
+        // The default branch is unreachable for well-formed input, but this
+        // version keeps a defensive path so no promise is made to the optimizer.
+        return 0;
     }
 }
 
@@ -37,7 +42,9 @@ static long long process_standard(const std::vector<Instruction>& stream) {
     long long total = 0;
     for (const auto& inst : stream) {
         if (inst.value == 0) {
-            total += 1; // error handling or rare fallback
+            // The rare fallback remains an ordinary branch, so the compiler must
+            // lay out code that is correct even if zeros appear often.
+            total += 1;
             continue;
         }
         total += handle_standard(inst.state, inst.value);
@@ -53,17 +60,22 @@ static int handle_hinted(State s, int val) {
     case State::C: return val * 2;
     case State::D: return val / 2;
     }
-    std::unreachable(); // Promise: no other State exists. Drops the default branch.
+
+    // This is a correctness promise, not a runtime check: if an invalid State
+    // reaches this point, the program has undefined behavior.
+    std::unreachable();
 }
 
 static long long process_hinted(const std::vector<Instruction>& stream) {
-    // Promise: the vector size is a multiple of 4. 
-    // This allows the optimizer to safely unroll the loop without bounds-checking the tail.
+    // Promise: the vector size is a multiple of 4. The benchmark chooses n to
+    // satisfy it; otherwise this hint would authorize invalid optimizations.
     [[assume(stream.size() % 4 == 0)]];
 
     long long total = 0;
     for (const auto& inst : stream) {
         if (inst.value == 0) [[unlikely]] {
+            // Marking the fallback as unlikely biases code layout toward the
+            // normal path; it must match the generated data distribution.
             total += 1;
             continue;
         }
@@ -75,13 +87,17 @@ static long long process_hinted(const std::vector<Instruction>& stream) {
 template <class F>
 static double time_ms(F&& f) {
     auto t0 = Clock::now();
-    volatile long long sink = f();   // volatile keeps the work from being elided
+
+    // The result is deliberately observed through volatile so the optimizer
+    // cannot replace the timed loop with "nothing uses this value".
+    volatile long long sink = f();
     (void)sink;
     return std::chrono::duration<double, std::milli>(Clock::now() - t0).count();
 }
 
 int main() {
-    // 40 million elements, explicitly a multiple of 4 to honor the [[assume]]
+    // 40 million elements is large enough for small code-layout differences to
+    // become measurable, and it is a multiple of 4 to honor the [[assume]].
     const size_t n = 40'000'000;
 
     std::mt19937 rng(12345);
@@ -90,8 +106,12 @@ int main() {
 
     std::vector<Instruction> data(n);
     for (auto& inst : data) {
-        // Force the value to be 0 very rarely (approx 1 in 100,000)
+        // Zero appears very rarely, making the fallback path honest data for
+        // [[unlikely]] instead of a wishful annotation.
         inst.value = (val_dist(rng) < 10) ? 0 : val_dist(rng);
+
+        // The state is always within the four enum cases, which makes the
+        // std::unreachable() promise true for this generated workload.
         inst.state = static_cast<State>(state_dist(rng));
     }
 
