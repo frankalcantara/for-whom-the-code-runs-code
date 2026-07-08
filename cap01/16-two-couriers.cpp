@@ -16,6 +16,8 @@ int main() {
 
     std::print("{:.0f} {:.0f}\n", north, south);
 
+    // Ranking uses the real estimates; rounding is only a presentation step and
+    // should not be allowed to create a false tie.
     if (north < south) std::print("NORTH\n");
     else if (south < north) std::print("SOUTH\n");
     else std::print("TIE\n");

@@ -15,7 +15,12 @@ int main() {
     std::vector<long long> seals(n);
     for (auto& seal : seals) std::cin >> seal;
 
+    // Adjacent equal codes turn the set-cardinality question into counting group
+    // representatives, which avoids the quadratic "have I seen this before?" scan.
     std::ranges::sort(seals);
+
+    // unique compacts one representative of each sorted group; the vector size is
+    // unchanged, so the returned boundary is the actual answer.
     auto duplicates = std::ranges::unique(seals);
     const auto distinct = std::ranges::distance(seals.begin(), duplicates.begin());
 

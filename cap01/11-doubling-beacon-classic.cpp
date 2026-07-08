@@ -1,5 +1,5 @@
 // Exercise 1.2 - The Doubling Beacon
-// Count powers of two not greater than n.
+// Classic spelling: count powers of two not greater than n.
 // Time: O(log n). Space: O(1).
 
 #include <iostream>
@@ -15,9 +15,12 @@ int main() {
     while (power <= n) {
         ++flashes;
 
-        // Test the next doubling with division so the last valid power near the
-        // unsigned limit is counted without overflowing first.
-        if (power > n / 2) break;
+        // The division asks whether the next doubling would fit, avoiding an
+        // overflow before the loop has a chance to stop.
+        if (power > n / 2) {
+            break;
+        }
+
         power *= 2;
     }
 

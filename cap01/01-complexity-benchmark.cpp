@@ -27,6 +27,8 @@ long long benchmark(Fn&& fn) {
         times[i] = chr::duration_cast<chr::microseconds>(t1 - t0).count();
     }
 
+    // The first run often pays cache and branch-predictor warm-up costs, so the
+    // best retained run better represents the algorithm's steady-state floor.
     return *std::ranges::min_element(times.begin() + 1, times.end());
 }
 
@@ -36,6 +38,9 @@ int count_distinct_naive(const std::vector<int>& a) {
 
     for (int i = 0; i < n; ++i) {
         bool seen = false;
+
+        // Only the prefix matters: if a value appears earlier, the current
+        // position is not the representative that should be counted.
         for (int j = 0; j < i; ++j) {
             if (a[j] == a[i]) {
                 seen = true;
@@ -49,7 +54,12 @@ int count_distinct_naive(const std::vector<int>& a) {
 }
 
 int count_distinct_sort(std::vector<int> a) {
+    // Sorting pays n log n comparisons to buy locality: each later duplicate check
+    // compares with the previous element instead of probing scattered history.
     std::ranges::sort(a);
+
+    // The returned range starts at the first discarded duplicate; measuring the
+    // prefix gives the number of representatives kept by unique.
     auto unique_end = std::ranges::unique(a);
     return static_cast<int>(
         std::ranges::distance(a.begin(), unique_end.begin()));
@@ -57,6 +67,8 @@ int count_distinct_sort(std::vector<int> a) {
 
 int count_distinct_hash(const std::vector<int>& a) {
     std::unordered_set<int> seen;
+    // Reserving makes the benchmark about hashing and memory locality, not about
+    // repeated table growth during insertion.
     seen.reserve(a.size());
     seen.max_load_factor(0.25f);
     for (int x : a) seen.insert(x);
@@ -80,6 +92,8 @@ int main() {
         auto data = generate(n);
 
         long long naive_us = -1;
+        // The quadratic version is intentionally capped; extrapolation is enough
+        // once the measured smaller case already predicts a multi-second run.
         if (n <= 10'000)
             naive_us = benchmark([&] { count_distinct_naive(data); });
 

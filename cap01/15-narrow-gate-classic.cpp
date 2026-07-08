@@ -1,6 +1,6 @@
 // Exercise 1.6 - The Narrow Gate
-// Count values representable by int and sum all submitted values.
-// Time: O(n). Space: O(1), excluding input buffering.
+// Classic spelling: count values representable by int and sum all inputs.
+// Time: O(n). Space: O(1).
 
 #include <iostream>
 #include <limits>
@@ -18,8 +18,8 @@ int main() {
         std::cin >> value;
         sum += value;
 
-        // The interval test must happen while the original wide value is still
-        // intact; narrowing first could wrap or otherwise lose the evidence.
+        // Testing the wide value preserves the evidence needed to decide whether
+        // the old int counter could have represented the declaration.
         if (value >= std::numeric_limits<int>::min() &&
             value <= std::numeric_limits<int>::max()) {
             ++accepted;

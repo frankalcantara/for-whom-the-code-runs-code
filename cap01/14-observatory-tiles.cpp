@@ -19,6 +19,9 @@ auto best_time(Fn&& fn) {
 
     for (auto& elapsed : times) {
         const auto begin = chr::steady_clock::now();
+
+        // Folding the checksum into observable state keeps the timed traversal
+        // alive even under aggressive optimization.
         checksum ^= fn();
         const auto end = chr::steady_clock::now();
         elapsed = chr::duration_cast<chr::microseconds>(end - begin).count();
@@ -39,17 +42,24 @@ int main() {
 
     auto row_major = [&] {
         long long sum = 0;
-        for (int row = 0; row < n; ++row)
-            for (int col = 0; col < n; ++col)
+        for (int row = 0; row < n; ++row) {
+            for (int col = 0; col < n; ++col) {
+                // Consecutive columns reuse the cache line that was just fetched.
                 sum += matrix[static_cast<std::size_t>(row) * n + col];
+            }
+        }
         return sum;
     };
 
     auto column_major = [&] {
         long long sum = 0;
-        for (int col = 0; col < n; ++col)
-            for (int row = 0; row < n; ++row)
+        for (int col = 0; col < n; ++col) {
+            for (int row = 0; row < n; ++row) {
+                // The same index formula is used, but row jumps turn each access
+                // into a stride of n elements through memory.
                 sum += matrix[static_cast<std::size_t>(row) * n + col];
+            }
+        }
         return sum;
     };
 

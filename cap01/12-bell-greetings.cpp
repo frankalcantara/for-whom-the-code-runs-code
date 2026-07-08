@@ -9,6 +9,8 @@ int main() {
     long long n = 0;
     std::cin >> n;
 
+    // n is already wide before the multiplication, so the product is not formed
+    // in int and then widened after the damage is done.
     const long long greetings = n * (n - 1) / 2;
     std::print("{}\n", greetings);
 }
