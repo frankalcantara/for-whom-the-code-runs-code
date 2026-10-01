@@ -1,0 +1,2 @@
+find(0) == find(2): true, find(4) == find(5): false
+rng::find encontrou 8 na posição 1

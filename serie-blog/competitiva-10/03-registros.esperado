@@ -1,0 +1,8 @@
+~^10\^6 int: crescente [0-9.]+ ms, decrescente [0-9.]+ ms, por \|x\| [0-9.]+ ms$
+2 * 10^5 registros, chave pontos, resultados iguais: true
+~^  registros de 256 bytes: +[0-9.]+ ms$
+~^  registros de 8 bytes: +[0-9.]+ ms$
+~^  índices com projeção: +[0-9.]+ ms$
+~^  índices e uma cópia final: +[0-9.]+ ms$
+~^  chave e índice, cópia final: +[0-9.]+ ms$
+~^valor observado para impedir a eliminação: -?[0-9]+$

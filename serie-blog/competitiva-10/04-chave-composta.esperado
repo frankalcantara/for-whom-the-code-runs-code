@@ -1,0 +1,7 @@
+5 * 10^6 competidores, pontos decrescentes e id crescente
+~^  comparação com dois testes: +[0-9.]+ ms$
+~^  projeção para tupla: +[0-9.]+ ms, mesma ordem: true$
+~^  chave inteira, nome da função: +[0-9.]+ ms, mesma ordem: true$
+~^  chave inteira, lambda: +[0-9.]+ ms, mesma ordem: true$
+~^  vetor de chaves inteiras: +[0-9.]+ ms, mesma ordem: true$
+~^valor observado para impedir a eliminação: -?[0-9]+$

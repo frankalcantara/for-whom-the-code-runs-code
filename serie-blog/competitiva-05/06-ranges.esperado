@@ -1,0 +1,13 @@
+testes do filtro antes de percorrer: 0
+resultado: 4 16 64
+testes do filtro depois de percorrer: 7
+quantidade de pares = 6
+enumerate | stride(3): (0, 10) (3, 40) (6, 70)
+stride(3) | enumerate: (0, 10) (1, 40) (2, 70)
+depois de unique: tamanho 8, cauda com 4 elementos
+depois de erase: 1 2 3 5
+~^por nota crescente: (Caio:640 Eva:640|Eva:640 Caio:640) Davi:700 Bia:710 Ana:820$
+primeiro com nota >= 700: Davi (700)
+~^por nota decrescente: Ana:820 Bia:710 Davi:700 (Caio:640 Eva:640|Eva:640 Caio:640)$
+maiores que 6: 7 9 8 10 12
+count_if(x % 3 == 0) = 4

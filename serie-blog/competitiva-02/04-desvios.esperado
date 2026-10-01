@@ -1,0 +1,9 @@
+n = 20000000, 1 aquecimento e 5 rodadas, mediana em ms
+~^corpo simples,  embaralhado: +[0-9.]+$
+~^corpo simples,  ordenado   : +[0-9.]+$
+~^com desvio,     embaralhado: +[0-9.]+$
+~^com desvio,     ordenado   : +[0-9.]+$
+~^sem desvio,     embaralhado: +[0-9.]+$
+~^sem desvio,     ordenado   : +[0-9.]+$
+as versões com e sem desvio concordam: true
+~^valor observado para impedir a eliminação: -?[0-9]+$

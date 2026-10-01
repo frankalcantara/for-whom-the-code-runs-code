@@ -1,0 +1,3 @@
+estável por |x|: [-1, 1, 2, -2, 3, -3]
+|x| e depois x:  [-1, 1, -2, 2, -3, 3]
+por cópia: 101, por referência: 501

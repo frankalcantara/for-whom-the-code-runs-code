@@ -1,0 +1,7 @@
+n = 96: as três ordens produzem a mesma matriz: true
+n = 512, 1 aquecimento e 5 rodadas por ordem
+~^i-j-k : mediana +[0-9.]+ ms, mínimo +[0-9.]+ ms$
+~^i-k-j : mediana +[0-9.]+ ms, mínimo +[0-9.]+ ms$
+~^blocos: mediana +[0-9.]+ ms, mínimo +[0-9.]+ ms$
+~^razão i-j-k / i-k-j = [0-9.]+$
+~^valor observado para impedir a eliminação: -?[0-9]+$

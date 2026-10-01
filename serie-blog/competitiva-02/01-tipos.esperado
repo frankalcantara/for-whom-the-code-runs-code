@@ -1,0 +1,7 @@
+sizeof(int) = 4 bytes, sizeof(long long) = 8 bytes
+int vai de -2147483648 a 2147483647
+soma de 200000 valores iguais a 1000000000 = 200000000000000
+produto com conversão antes da multiplicação = 200000000000000
+unsigned 0 menos 1 = 4294967295
+auto a = 1 deduz int, auto b = 0LL deduz long long
+v.size() = 5, soma de v = 14

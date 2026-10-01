@@ -1,0 +1,8 @@
+sizeof(Ponto) = 12 bytes
+resultados iguais: true
+3 * 10^7 registros, mediana de 5 rodadas
+~^AoS, só o campo x +: +[0-9.]+ ms$
+~^SoA, só o campo x +: +[0-9.]+ ms$
+~^AoS, os três campos : +[0-9.]+ ms$
+~^SoA, os três campos : +[0-9.]+ ms$
+~^valor observado para impedir a eliminação: -?[0-9]+$

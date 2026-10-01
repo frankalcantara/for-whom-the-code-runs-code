@@ -1,0 +1,7 @@
+valido: 26 -3 12
+contagem_ausente: ERRO: a contagem está ausente ou não é um inteiro
+contagem_zero: ERRO: a contagem precisa ser positiva
+medida_malformada: ERRO: a medida 2 está ausente ou malformada
+medida_faltando: ERRO: a medida 4 está ausente ou malformada
+dados_extras: ERRO: há dados depois da última medida
+inexistente: ERRO: não foi possível abrir o arquivo

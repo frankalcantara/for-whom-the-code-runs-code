@@ -1,0 +1,10 @@
+~^capacidades:( [0-9]+)+$
+~^sem reserve: [0-9]+ realocações, [0-9]+ elementos movidos, capacidade final [0-9]+$
+com reserve: 0 realocações, capacidade final 1000000
+~^capacidade 4 -> [0-9]+, endereço mudou: true$
+~^10\^7 push_back sem reserve: +[0-9.]+ ms$
+~^10\^7 push_back com reserve: +[0-9.]+ ms$
+soma de 1 a 100000 = 5000050000
+prefixos: 0 2000000000 4000000000 3999999995 4000000002
+soma de [1, 4) = 2000000002
+~^valor observado para impedir a eliminação: -?[0-9]+$

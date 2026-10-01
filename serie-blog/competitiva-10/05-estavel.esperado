@@ -1,0 +1,6 @@
+stable_sort: Bruno(95) Diego(95) Ana(80) Carla(80)
+~^sort       : (Bruno\(95\) Diego\(95\)|Diego\(95\) Bruno\(95\)) (Ana\(80\) Carla\(80\)|Carla\(80\) Ana\(80\))$
+~^1000 registros, 10 chaves: quebras de ordem original com sort [0-9]+, com stable_sort 0$
+passada 1, nome crescente      : Alice(72) Ana(95) Bruno(80) Carlos(80) Diana(95)
+passada 2, pontos decrescentes : Ana(95) Diana(95) Bruno(80) Carlos(80) Alice(72)
+mesma ordem da projeção para tupla: true

@@ -1,0 +1,6 @@
+x =    1: countl_zero = 31, zeros_a_esquerda = 31, popcount = 1, bit_width =  1, has_single_bit = true, bit_floor =    1, bit_ceil =    1
+x =   12: countl_zero = 28, zeros_a_esquerda = 28, popcount = 2, bit_width =  4, has_single_bit = false, bit_floor =    8, bit_ceil =   16
+x =   40: countl_zero = 26, zeros_a_esquerda = 26, popcount = 2, bit_width =  6, has_single_bit = false, bit_floor =   32, bit_ceil =   64
+x = 1024: countl_zero = 21, zeros_a_esquerda = 21, popcount = 1, bit_width = 11, has_single_bit = true, bit_floor = 1024, bit_ceil = 1024
+x =    0: countl_zero = 32, zeros_a_esquerda = 32, popcount = 0, bit_width =  0, has_single_bit = false, bit_floor =    0, bit_ceil =    1
+quadrados[12] = 144, primos abaixo de 1000 = 168

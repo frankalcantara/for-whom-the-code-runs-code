@@ -1,0 +1,9 @@
+~^threads de hardware: [0-9]+$
+2 * 10^7 elementos, mediana de 5 rodadas
+~^leve,   seq       : +[0-9.]+ ms$
+~^leve,   par_unseq : +[0-9.]+ ms$
+~^pesado, seq       : +[0-9.]+ ms$
+~^pesado, par_unseq : +[0-9.]+ ms$
+~^aceleração leve = [0-9.]+, aceleração pesado = [0-9.]+$
+resultados iguais: true
+~^valor observado para impedir a eliminação: -?[0-9]+$

@@ -1,0 +1,8 @@
+10^6 strings de 64 caracteres, mediana de 5 rodadas
+~^push_back\(s\) +: +[0-9.]+ ms$
+~^push_back\(std::move\(s\)\) : +[0-9.]+ ms$
+~^emplace_back\(64, 'x'\) +: +[0-9.]+ ms$
+~^10\^6 int com std::move +: +[0-9.]+ ms$
+destino[0] = caravana, origem reatribuída = nova
+arestas: (3, 7) (4, 9)
+~^valor observado para impedir a eliminação: -?[0-9]+$

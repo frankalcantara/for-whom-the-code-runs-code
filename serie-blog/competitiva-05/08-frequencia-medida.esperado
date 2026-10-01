@@ -1,0 +1,11 @@
+~^ +n \| +ingênua \| +ordenação \| +hash \| +contagem$
+~^ +1000 \| +[0-9.]+ \| +[0-9.]+ \| +[0-9.]+ \| +[0-9.]+$
+respostas iguais para n = 1000: true
+~^ +10000 \| +[0-9.]+ \| +[0-9.]+ \| +[0-9.]+ \| +[0-9.]+$
+respostas iguais para n = 10000: true
+~^ +100000 \| +omitida \| +[0-9.]+ \| +[0-9.]+ \| +[0-9.]+$
+respostas iguais para n = 100000: true
+~^ +1000000 \| +omitida \| +[0-9.]+ \| +[0-9.]+ \| +[0-9.]+$
+respostas iguais para n = 1000000: true
+tempos em ms, mediana de 5 rodadas
+~^valor observado para impedir a eliminação: -?[0-9]+$

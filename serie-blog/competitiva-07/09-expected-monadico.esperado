@@ -1,0 +1,7 @@
+'21' -> 42 (escada e cadeia iguais: true)
+'' -> erro: entrada vazia (escada e cadeia iguais: true)
+'4x' -> erro: não é um número (escada e cadeia iguais: true)
+'-5' -> erro: valor negativo (escada e cadeia iguais: true)
+or_else com padrão 0: 0
+transform_error: configuração inválida: entrada vazia
+value_or: -1

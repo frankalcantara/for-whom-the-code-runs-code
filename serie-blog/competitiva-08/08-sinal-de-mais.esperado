@@ -1,0 +1,4 @@
+ -0007: consumidos=5 erro=nenhum valor=-7
+ +0042: consumidos=0 erro=invalid_argument valor=999
+  0042: consumidos=4 erro=nenhum valor=42
+  0000: consumidos=4 erro=nenhum valor=0

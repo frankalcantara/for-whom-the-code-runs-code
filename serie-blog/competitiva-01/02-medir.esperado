@@ -1,0 +1,2 @@
+soma = 49999995000000 (esperado 49999995000000): correta
+~^mínimo = \d+ us, mediana = \d+ us$

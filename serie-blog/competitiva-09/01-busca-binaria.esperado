@@ -1,0 +1,6 @@
+lower_bound(2) = 1, upper_bound(2) = 4, ocorrências = 3
+lower_bound(0) = 0, lower_bound(10) = 7, lower_bound(6) = 5
+biblioteca: lower 1 upper 4 binary_search(7) = false binary_search(8) = true
+n = 10^6: no máximo 20 comparações
+primeiro com pontos >= 80: Caio (id 9), existe 95: true
+contains(d, 3) = true, contains(d, 7) = false, find_last(d, 9) na posição 3

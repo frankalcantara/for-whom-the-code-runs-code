@@ -1,0 +1,5 @@
+n = 40000000, 1 aquecimento e 5 rodadas, mediana em ms
+~^sem dicas: +[0-9.]+$
+~^com dicas: +[0-9.]+$
+resultados iguais: true
+~^valor observado para impedir a eliminação: -?[0-9]+$

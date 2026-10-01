@@ -1,0 +1,6 @@
+200000 strings de 40 caracteres, mediana de 5 rodadas
+~^for \(auto s : \.\.\.\)        : +[0-9.]+ ms$
+~^for \(const auto& s : \.\.\.\) : +[0-9.]+ ms$
+~^razão cópia / referência = [0-9.]+$
+resultados iguais: true
+~^valor observado para impedir a eliminação: -?[0-9]+$

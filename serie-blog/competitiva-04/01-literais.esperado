@@ -1,0 +1,18 @@
+42                       valor 42                     tipo int
+010                      valor 8                      tipo int
+0x1F                     valor 31                     tipo int
+0b1010                   valor 10                     tipo int
+2147483647               valor 2147483647             tipo int
+2147483648               valor 2147483648             tipo long long
+0x80000000               valor 2147483648             tipo unsigned int
+3'000'000'000            valor 3000000000             tipo long long
+42U                      valor 42                     tipo unsigned int
+42LL                     valor 42                     tipo long long
+1'000'000LL * 1'000'000  valor 1000000000000          tipo long long
+sizeof(long) = 4 bytes
+42uz é std::size_t: true
+42z tem sinal e 8 bytes: true
+0x1.Fp3 = 15.5
+0.1 + 0.2 == 0.3: false
+0.1 + 0.2 = 0.30000000000000004
+std::float16_t disponível: não

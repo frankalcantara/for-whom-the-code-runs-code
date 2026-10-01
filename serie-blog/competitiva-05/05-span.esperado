@@ -1,0 +1,7 @@
+sizeof(std::span<const int>) = 16
+sizeof(std::span<const int, 3>) = 8
+soma(vetor) = 31, soma(array) = 60, soma(bruto) = 4
+subspan(2, 3) = 9 4 1, soma = 14
+subspan aponta para dentro de v: true
+depois de soma_um nos dois primeiros: 8 3 9
+a vista ficou apontando para o bloco antigo: true

@@ -1,0 +1,8 @@
+ABC: fread=198 ifstream=198 mapeamento=198
+vazio: fread=0 mapeamento=0
+256 MiB, cache aquecido, mediana de 5 rodadas
+~^fread, blocos de 1 MiB    : +[0-9.]+ ms$
+~^ifstream, blocos de 1 MiB : +[0-9.]+ ms$
+~^mapeamento na memória     : +[0-9.]+ ms$
+somas iguais nos três modos: true
+~^valor observado para impedir a eliminação: -?[0-9]+$

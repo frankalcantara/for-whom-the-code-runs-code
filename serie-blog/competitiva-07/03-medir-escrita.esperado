@@ -1,0 +1,8 @@
+~^modo +\| mediana \(ms\) \| bytes gerados \| quebras \\r\\n$
+~^endl +\| +[0-9.]+ \| +[0-9]+ \| +[0-9]+$
+~^barra_n +\| +[0-9.]+ \| +[0-9]+ \| +[0-9]+$
+~^printf +\| +[0-9.]+ \| +[0-9]+ \| +[0-9]+$
+~^print +\| +[0-9.]+ \| +[0-9]+ \| +[0-9]+$
+~^buffer +\| +[0-9.]+ \| +[0-9]+ \| +[0-9]+$
+~^buffer_binario +\| +[0-9.]+ \| +[0-9]+ \| +[0-9]+$
+saídas conferidas em todos os modos: true

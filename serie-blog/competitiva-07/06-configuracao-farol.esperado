@@ -1,0 +1,9 @@
+valido: brilho=72
+valido: com optional, tem valor = true
+texto: ERRO: o brilho não é um inteiro
+texto: com optional, tem valor = false
+alto: ERRO: o brilho está fora de [0, 100]
+alto: com optional, tem valor = false
+extra: ERRO: há dados depois do valor
+extra: com optional, tem valor = false
+ausente: ERRO: o arquivo não existe

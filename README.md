@@ -6,10 +6,11 @@ The book keeps only the smallest useful excerpts inline. The full implementation
 
 ## Contents
 
-- Complete C++23 programs: 380
-- Files with `main`: 380
+- Complete C++23 programs: 470
+- Files with `main`: 470
 - Canonical layout: `cap01/` through `cap16`
 - Training program solutions: `cap18/`
+- Programs from the Portuguese blog series, with test cases: `serie-blog/` (see `serie-blog/README.md`)
 - Mechanical index: `manifest.csv`
 
 ## Build
@@ -123,6 +124,10 @@ cap13/09-surveyors-parchment.cpp
 cap14/07-expedition-crates.cpp
 cap18/t05-s4-2-twin-inscriptions.cpp
 ```
+
+## Portuguese Blog Series
+
+The folder `serie-blog/` holds the programs of the Portuguese web edition, *Programação Competitiva em C++23*, one folder per article (`competitiva-01`, `competitiva-02`, ...). Comments are in Portuguese. Each program may have `.in` inputs and `.esperado` expected outputs next to it. They are validated with MSVC 19.51 (`/std:c++latest /O2 /EHsc /W4 /permissive- /Zc:__cplusplus /utf-8`).
 
 ## License
 

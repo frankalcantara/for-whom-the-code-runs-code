@@ -1,0 +1,6 @@
+~^ +n \| +sort \| +radix 8 \| 8, 1 leitura \| +radix 11 \| +radix 16 \| iguais$
+~^ +10000 \| .* \| true$
+~^ +100000 \| .* \| true$
+~^ +1000000 \| .* \| true$
+~^ +10000000 \| .* \| true$
+~^valor observado para impedir a eliminação: -?[0-9]+$

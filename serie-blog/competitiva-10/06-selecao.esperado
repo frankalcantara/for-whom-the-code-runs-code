@@ -1,0 +1,4 @@
+~^n = 10\^7: sort [0-9.]+ ms, nth_element da mediana [0-9.]+ ms, mediana correta: true$
+~^k = 100: nth_element e sort dos k [0-9.]+ ms, partial_sort [0-9.]+ ms, prefixos corretos: true$
+~^k = 1000000: nth_element e sort dos k [0-9.]+ ms, partial_sort [0-9.]+ ms, prefixos corretos: true$
+~^valor observado para impedir a eliminação: -?[0-9]+$
