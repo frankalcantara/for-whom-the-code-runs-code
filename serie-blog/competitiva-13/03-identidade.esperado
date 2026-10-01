@@ -1,0 +1,19 @@
+a:   3   1   4   1   5   9   2
+P, prefixos de a (P[0] = 0):   0   3   4   8   9  14  23  25
+D, diferenças de a:   3  -2   3  -3   4   4  -7
+diferenças de P:   3   1   4   1   5   9   2
+prefixos de D:   3   1   4   1   5   9   2
+soma de a[2..5], fechado: P[6] - P[2] = 23 - 4 = 19
+marcas: +5 em [1, 4] e -2 em [3, 6]:   0   5   0  -2   0  -5   0   2
+efeito, prefixos das marcas:   0   5   5   3   3  -2  -2
+marcas em duas dimensões:
+   0   0   1  -1   0   0
+   0   4   0   0  -4   0
+   0   0   0   0   0   0
+   0  -4   0   0   4   0
+   0   0  -1   1   0   0
+grade final:
+   0   0   1   0   0
+   0   4   5   4   0
+   0   4   5   4   0
+   0   0   1   0   0

@@ -1,0 +1,3 @@
+~^n = m = 20000: direto [0-9.]+ ms \(1 rodada\) \(132326348 somas\), diferenças [0-9.]+ ms, iguais: true$
+~^n = m = 200000: direto [0-9.]+ ms \(1 rodada\) \(13348944024 somas\), diferenças [0-9.]+ ms, iguais: true$
+~^valor observado para impedir a eliminação: -?[0-9]+$

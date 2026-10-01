@@ -1,0 +1,7 @@
+~^construção de 10\^7 prefixos: relendo p\[i\] [0-9.]+ ms, acumulador local [0-9.]+ ms, ponteiros locais [0-9.]+ ms, inclusive_scan [0-9.]+ ms, iguais: true$
+~^10\^4 consultas em 10\^5 valores: soma direta [0-9.]+ ms \(334854289 parcelas\), prefixos [0-9.]+ ms, iguais: true$
+~^prefixos de +10000 valores \( +0\.08 MB\): [0-9.]+ ns por consulta aleatória$
+~^prefixos de +100000 valores \( +0\.80 MB\): [0-9.]+ ns por consulta aleatória$
+~^prefixos de +1000000 valores \( +8\.00 MB\): [0-9.]+ ns por consulta aleatória$
+~^prefixos de 10000000 valores \( 80\.00 MB\): [0-9.]+ ns por consulta aleatória$
+~^valor observado para impedir a eliminação: -?[0-9]+$
