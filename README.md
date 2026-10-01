@@ -6,8 +6,8 @@ The book keeps only the smallest useful excerpts inline. The full implementation
 
 ## Contents
 
-- Complete C++23 programs: 470
-- Files with `main`: 470
+- Complete C++23 programs: 481
+- Files with `main`: 481
 - Canonical layout: `cap01/` through `cap16`
 - Training program solutions: `cap18/`
 - Programs from the Portuguese blog series, with test cases: `serie-blog/` (see `serie-blog/README.md`)
