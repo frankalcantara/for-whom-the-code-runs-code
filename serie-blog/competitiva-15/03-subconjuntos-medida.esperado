@@ -1,0 +1,2 @@
+~^2\^22 subconjuntos: 22 operações por máscara [0-9.]+ ms, reaproveitando [0-9.]+ ms, mesma contagem: true$
+~^valor observado para impedir a eliminação: -?[0-9]+$

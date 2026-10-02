@@ -1,0 +1,6 @@
+~^bytes: [0-9.]+ ms em 200000 consultas, [0-9.]+ ns por consulta, confere: true$
+~^std::vector<bool>: [0-9.]+ ms em 20000 consultas, [0-9.]+ ns por consulta, confere: true$
+~^palavras com std::popcount: [0-9.]+ ms em 200000 consultas, [0-9.]+ ns por consulta, confere: true$
+~^palavras com __popcnt64: [0-9.]+ ms em 200000 consultas, [0-9.]+ ns por consulta, confere: true$
+~^std::bitset<4096>: [0-9.]+ ms em 200000 consultas, [0-9.]+ ns por consulta, confere: true$
+~^valor observado para impedir a eliminação: -?[0-9]+$

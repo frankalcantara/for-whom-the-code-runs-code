@@ -1,0 +1,5 @@
+~^1 bits ligados: testando as 64 posições [0-9.]+ ms, por bit ligado [0-9.]+ ms, mesma soma: true$
+~^8 bits ligados: testando as 64 posições [0-9.]+ ms, por bit ligado [0-9.]+ ms, mesma soma: true$
+~^32 bits ligados: testando as 64 posições [0-9.]+ ms, por bit ligado [0-9.]+ ms, mesma soma: true$
+~^63 bits ligados: testando as 64 posições [0-9.]+ ms, por bit ligado [0-9.]+ ms, mesma soma: true$
+~^valor observado para impedir a eliminação: -?[0-9]+$
