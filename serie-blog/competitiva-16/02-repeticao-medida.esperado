@@ -1,0 +1,2 @@
+~^2 \* 10\^5 janelas: unordered_set com reserve [0-9.]+ ms, sem reserve [0-9.]+ ms, ordenando os pares [0-9.]+ ms, mesmas respostas: true$
+~^valor observado para impedir a eliminação: -?[0-9]+$

@@ -1,0 +1,7 @@
+~^n = 20000, aleatórios: Lomuto [0-9.]+ ms, três partes [0-9.]+ ms, nth_element [0-9.]+ ms, mesma mediana: true$
+~^n = 20000, 10 valores distintos: Lomuto [0-9.]+ ms, três partes [0-9.]+ ms, nth_element [0-9.]+ ms, mesma mediana: true$
+~^n = 20000, todos iguais: Lomuto [0-9.]+ ms, três partes [0-9.]+ ms, nth_element [0-9.]+ ms, mesma mediana: true$
+~^n = 1000000, aleatórios: Lomuto [0-9.]+ ms, três partes [0-9.]+ ms, nth_element [0-9.]+ ms, mesma mediana: true$
+~^n = 1000000, 10 valores distintos: Lomuto não medido, três partes [0-9.]+ ms, nth_element [0-9.]+ ms, mesma mediana: true$
+~^n = 1000000, todos iguais: Lomuto não medido, três partes [0-9.]+ ms, nth_element [0-9.]+ ms, mesma mediana: true$
+~^valor observado para impedir a eliminação: -?[0-9]+$

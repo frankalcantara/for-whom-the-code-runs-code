@@ -1,0 +1,4 @@
+cadeias diferentes: true
+módulo 2^64, bases ímpares: 1000 colisões em 1000
+módulo 2^64, bases pares: 0 colisões em 1000
+módulo 2^61 - 1, bases sorteadas: 0 colisões em 1000

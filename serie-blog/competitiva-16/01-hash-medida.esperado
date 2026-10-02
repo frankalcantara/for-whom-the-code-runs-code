@@ -1,0 +1,3 @@
+~^construção de 10\^7 prefixos: módulo 2\^64 [0-9.]+ ms, 2\^61 - 1 com 128 bits [0-9.]+ ms, 2\^61 - 1 por partes [0-9.]+ ms$
+produto por partes igual ao de 128 bits: true
+~^valor observado para impedir a eliminação: -?[0-9]+$

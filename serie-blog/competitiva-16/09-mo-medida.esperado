@@ -1,0 +1,5 @@
+~^bloco 447, ordem simples: [0-9.]+ ms, [0-9]+ passos dos ponteiros, respostas conferem: true$
+~^bloco 447, serpentina: [0-9.]+ ms, [0-9]+ passos dos ponteiros, respostas conferem: true$
+~^bloco 100, serpentina: [0-9.]+ ms, [0-9]+ passos dos ponteiros, respostas conferem: true$
+~^bloco 2000, serpentina: [0-9.]+ ms, [0-9]+ passos dos ponteiros, respostas conferem: true$
+~^valor observado para impedir a eliminação: -?[0-9]+$
