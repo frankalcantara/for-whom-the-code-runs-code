@@ -1,0 +1,4 @@
+~^aleatórios em \[-10\^9, 10\^9\]: com índices [0-9.]+ ms, só a soma [0-9.]+ ms, mesma soma: true$
+~^aleatórios em \[-10, 9\]: com índices [0-9.]+ ms, só a soma [0-9.]+ ms, mesma soma: true$
+~^todos positivos, em \[1, 100\]: com índices [0-9.]+ ms, só a soma [0-9.]+ ms, mesma soma: true$
+~^valor observado para impedir a eliminação: -?[0-9]+$

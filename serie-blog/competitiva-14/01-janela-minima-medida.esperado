@@ -1,0 +1,4 @@
+~^n = 10\^6, k = +10: ingênua [0-9.]+ ms, std::deque [0-9.]+ ms, vetor [0-9.]+ ms, iguais: true$
+~^n = 10\^6, k = +1000: ingênua [0-9.]+ ms, std::deque [0-9.]+ ms, vetor [0-9.]+ ms, iguais: true$
+~^n = 10\^6, k = 100000: ingênua não medida, std::deque [0-9.]+ ms, vetor [0-9.]+ ms, iguais: true$
+~^valor observado para impedir a eliminação: -?[0-9]+$
