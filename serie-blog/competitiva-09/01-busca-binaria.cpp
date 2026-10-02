@@ -10,7 +10,7 @@ long long comparacoes = 0;
 int primeiro_ge(const std::vector<int>& v, int alvo) {
     int lo = 0, hi = static_cast<int>(v.size());     // intervalo desconhecido [lo, hi)
     while (lo < hi) {
-        const int meio = lo + (hi - lo) / 2;         // sem transbordamento
+        const int meio = lo + (hi - lo) / 2;         // sem overflow
         ++comparacoes;
         if (v[meio] < alvo) lo = meio + 1;           // meio é sabidamente falso
         else                hi = meio;               // meio pode ser a resposta

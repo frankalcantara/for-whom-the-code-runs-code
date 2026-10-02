@@ -1,4 +1,4 @@
-// Soma e mínimo de intervalo: prefixos para a soma e tabela esparsa para o mínimo.
+// Soma e mínimo de intervalo: prefixos para a soma e sparse table para o mínimo.
 #include <algorithm>
 #include <bit>
 #include <iostream>

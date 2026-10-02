@@ -1,4 +1,4 @@
-// Mínimo de intervalo: varredura direta contra a tabela esparsa, construção e consultas.
+// Mínimo de intervalo: varredura direta contra a sparse table, construção e consultas.
 #include <algorithm>
 #include <bit>
 #include <print>

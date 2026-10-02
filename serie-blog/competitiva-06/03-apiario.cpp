@@ -1,4 +1,4 @@
-// T02.3, o censo do apiário: contagem com tabela de dispersão e desempate pelo menor número.
+// T02.3, o censo do apiário: contagem com hash table e desempate pelo menor número.
 #include <iostream>
 #include <print>
 #include <unordered_map>

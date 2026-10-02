@@ -22,7 +22,7 @@ int main() {
             std::cin >> id;
             auto [it, nova] = assinatura.try_emplace(id, 0);
             if (nova) it->second = gerador();                  // sorteada na primeira aparição
-            p[i + 1] = p[i] + it->second;                      // transborda de propósito, módulo 2^64
+            p[i + 1] = p[i] + it->second;                      // overflow de propósito, módulo 2^64
         }
         return p;
     };

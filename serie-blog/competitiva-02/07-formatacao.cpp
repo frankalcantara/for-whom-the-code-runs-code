@@ -10,7 +10,7 @@ int main() {
     std::println("{}", x);
 
     // Campos alinhados à direita com largura fixa.
-    std::println("{:>8}  {:>12}  {:>12}", "n", "ordenação", "dispersão");
+    std::println("{:>8}  {:>12}  {:>12}", "n", "ordenação", "hash table");
     std::println("{:>8}  {:>12}  {:>12}", 1000, 420, 1020);
     std::println("{:>8}  {:>12}  {:>12}", 1000000, 802698, 1088176);
 

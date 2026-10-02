@@ -1,4 +1,4 @@
-// Exercício 5.5, o vale congelado: mínimo de intervalo com tabela esparsa em um vetor plano.
+// Exercício 5.5, o vale congelado: mínimo de intervalo com sparse table em um vetor plano.
 #include <algorithm>
 #include <bit>
 #include <iostream>

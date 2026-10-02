@@ -1,4 +1,4 @@
-// O livro no limite: leitura de valores entre LLONG_MIN e LLONG_MAX sem transbordar.
+// O livro no limite: leitura de valores entre LLONG_MIN e LLONG_MAX sem overflow.
 #include <climits>
 #include <cstdio>
 #include <print>

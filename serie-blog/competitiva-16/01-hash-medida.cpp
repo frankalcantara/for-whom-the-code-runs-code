@@ -1,4 +1,4 @@
-// Hash de prefixo de 10^7 letras: módulo 2^64 pelo transbordamento, módulo 2^61 - 1 com o produto de
+// Hash de prefixo de 10^7 letras: módulo 2^64 pelo overflow, módulo 2^61 - 1 com o produto de
 // 128 bits e módulo 2^61 - 1 com o produto montado por partes de 32 bits, sem extensões.
 #include <cstdint>
 #include <print>

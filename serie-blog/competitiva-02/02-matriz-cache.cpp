@@ -10,7 +10,7 @@ Matriz gerar(int n, int semente) {
     Matriz m(n, std::vector<int>(n));
     for (int i = 0; i < n; ++i)
         for (int j = 0; j < n; ++j)
-            m[i][j] = (i * 31 + j * 17 + semente) % 7;  // valores pequenos: sem estouro
+            m[i][j] = (i * 31 + j * 17 + semente) % 7;  // valores pequenos: sem overflow
     return m;
 }
 

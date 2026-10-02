@@ -1,4 +1,4 @@
-// A2.2, a cota do moinho: busca na resposta, forma de minimização, com teto sem transbordamento.
+// A2.2, a cota do moinho: busca na resposta, forma de minimização, com teto sem overflow.
 #include <algorithm>
 #include <iostream>
 #include <print>
@@ -16,7 +16,7 @@ int main() {
         long long total = 0;
         for (const long long h : monte) {
             total += h / r + (h % r != 0 ? 1 : 0);    // teto de h / r sem calcular h + r - 1
-            if (total > horas) return false;          // a saída antecipada também impede o transbordamento
+            if (total > horas) return false;          // a saída antecipada também impede o overflow
         }
         return true;
     };

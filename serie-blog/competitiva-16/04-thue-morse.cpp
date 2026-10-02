@@ -15,7 +15,7 @@ int main() {
         s[i] = impar ? 'b' : 'a';
         t[i] = impar ? 'a' : 'b';                                              // o complemento
     }
-    auto hash64 = [](const std::string& x, std::uint64_t b) {                 // módulo 2^64, pelo transbordamento
+    auto hash64 = [](const std::string& x, std::uint64_t b) {                 // módulo 2^64, pelo overflow
         std::uint64_t h = 0;
         for (char c : x) h = h * b + static_cast<unsigned char>(c);
         return h;

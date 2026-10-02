@@ -1,4 +1,4 @@
-// T05.5, o levantamento do leito do rio: mínimo de intervalo com tabela esparsa em um vetor plano,
+// T05.5, o levantamento do leito do rio: mínimo de intervalo com sparse table em um vetor plano,
 // para até 10^6 consultas, com a saída acumulada em uma única cadeia.
 #include <algorithm>
 #include <bit>
