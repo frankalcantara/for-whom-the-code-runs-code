@@ -1,0 +1,7 @@
+~^referência, sort de 10\^6 inteiros: [0-9.]+ ms$
+~^vetor de contagem: [0-9.]+ ms$
+~^std::unordered_map com reserve: [0-9.]+ ms$
+~^std::map: [0-9.]+ ms, uma rodada$
+~^ordenar e varrer: [0-9.]+ ms$
+mesmas frequências: true
+~^valor observado para impedir a eliminação: -?[0-9]+$

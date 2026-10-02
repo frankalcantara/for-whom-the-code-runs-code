@@ -1,0 +1,8 @@
+~^[0-9]+ chaves distintas, 2000000 perguntas, [0-9]+ presentes$
+~^std::set: [0-9.]+ ms$
+~^vetor ordenado com binary_search: [0-9.]+ ms$
+~^std::flat_set: ([0-9.]+ ms|indisponível nesta biblioteca)$
+~^std::unordered_set, hash da biblioteca: [0-9.]+ ms$
+~^std::unordered_set, hash próprio: [0-9.]+ ms$
+mesmas respostas: true
+~^valor observado para impedir a eliminação: -?[0-9]+$

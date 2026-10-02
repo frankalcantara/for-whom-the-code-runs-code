@@ -1,0 +1,5 @@
+~^deque monotônico sobre vetor: [0-9.]+ ms$
+~^fila com duas pilhas: [0-9.]+ ms$
+~^std::multiset: [0-9.]+ ms$
+mesmos mínimos: true
+~^valor observado para impedir a eliminação: -?[0-9]+$
